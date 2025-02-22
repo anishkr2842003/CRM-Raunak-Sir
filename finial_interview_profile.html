@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Dashboard - Lead From</title>
+    <title>Dashboard - Candidate Profile</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--base css styles-->
@@ -28,8 +28,6 @@
     <link rel="stylesheet" type="text/css" href="assets/bootstrap-daterangepicker/daterangepicker.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap-switch/static/stylesheets/bootstrap-switch.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css">
-
-
 </head>
 
 <body>
@@ -174,14 +172,21 @@
                         <b class="arrow fa fa-caret-down"></b>
                     </a>
                     <ul class="dropdown-menu dropdown-navbar">
-                        <div class="" role="toolbar" aria-label="...">
-                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Dashboard</a>
+                        <div class="" role="toolbar">
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href='hrms_dashboard.html'>Dashboard</a>
                             </div>
-                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">PL & OD
-                                    Login</a>
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href="finial_interview.html">Interviews</a>
                             </div>
-                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
-                                    Login</a>
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href='add_employee.html'>Add Employee</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href="finial_attendance.html">Attendence</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href="#">Target</a>
                             </div>
                         </div>
                     </ul>
@@ -284,14 +289,15 @@
                                             <div class="edit_btn_on_lead">
                                                 <i class="fa fa-pencil" style="color: black;"></i>
                                             </div>
-                                            <div class="edit_btn_on_lead">
+                                            <div class="edit_btn_on_lead open-modal-btn" id="openModalBtn2"
+                                                style="cursor: pointer;">
                                                 <i class="fa fa-pencil" style="color: white;"></i>
                                             </div>
                                             <div class="row">
                                                 <div class="col-sm-4">
                                                     <div class="all_leads_section">
                                                         <h5>Candidate Id</h5>
-                                                        <p>PL1</p>
+                                                        <p>01</p>
                                                     </div>
                                                     <div class="all_leads_section">
                                                         <h5>Gender</h5>
@@ -341,170 +347,38 @@
                                                     </div>
                                                 </div>
                                             </div>
+                                            <hr>
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <h3 class="label_color_text">All Attachement</h3>
+                                                </div>
+                                                <div class="col-md-4 ">
+                                                    <div class="card task_card ">
+                                                        <div class="car-header">
+                                                            <h5 class="label_color_text">Timing</h5>
+                                                            <p>Today , 12:14 Am</p>
+                                                        </div>
+                                                        <div class="car-header"
+                                                            style="margin-bottom: 10px; justify-content: end;">
+                                                            <button class="btn view-btn" data-lead_id="47"
+                                                                data-admin_id="1" data-bs-toggle="modal"
+                                                                data-bs-target="#viewModal">View</button>
+                                                            <button class="btn" id="downloadButton">Download</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-8 ">
+                                                    <div class="card  ">
+                                                        <div class="car-header">
+                                                            <h5 class="label_color_text">Interview Recording</h5>
+                                                        </div>
+                                                        <audio src="music.mp3" controls
+                                                            style="width: 100%; background-color: transparent;"></audio>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="tab-pane fade all_tabs_bg" id="obligation">
-                                    <div class="boligation_tabls">
-                                        <div class="row">
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="text-light control-label"> Salary</label>
-                                                    <div class="controls">
-                                                        <input type="text" placeholder="₹" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="text-light control-label"> Yearly Bonus</label>
-                                                    <div class="controls">
-                                                        <input type="text" placeholder="₹" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="text-light control-label"> Loan amount
-                                                        required</label>
-                                                    <div class="controls">
-                                                        <input type="text" placeholder="₹" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-11">
-                                                <div class="form-group">
-                                                    <label class="text-light control-label">Company name</label>
-                                                    <div class="controls">
-                                                        <input type="text" placeholder="Comapny Name"
-                                                            class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-1">
-                                                <a style="margin-top: 23px;" href="https://www.zaubacorp.com/"
-                                                    target="_blank" class="btn">check</a>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label class="control-label text-light">Company type</label>
-                                                    <div class="controls">
-                                                        <select class="form-control"
-                                                            data-placeholder="Choose a Category" tabindex="1">
-                                                            <option value="">Government Doctor</option>
-                                                            <option value="">Government Teacher</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <div class="form-group">
-                                                    <label class="control-label text-light">Company Category</label>
-                                                    <div class="controls">
-                                                        <select class="form-control"
-                                                            data-placeholder="Choose a Category" tabindex="1">
-                                                            <option value="">Government Doctor</option>
-                                                            <option value="">Government Teacher</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="text-light control-label"> Obligation</label>
-                                                    <div class="controls">
-                                                        <input type="text" placeholder="" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="text-light control-label"> Pos</label>
-                                                    <div class="controls">
-                                                        <input type="text" placeholder="" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-sm-4">
-                                                <div class="form-group">
-                                                    <label class="text-light control-label"> CIbil score</label>
-                                                    <div class="controls">
-                                                        <input type="text" placeholder="" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="table-responsive">
-                                            <table class="table table-advance" style="padding: 0px;">
-                                                <thead style="background-color: black;">
-                                                    <tr>
-                                                        <th>#</th>
-                                                        <th>Loan Type</th>
-                                                        <th>Bank Name</th>
-                                                        <th>Total Loan Amount</th>
-                                                        <th>POS</th>
-                                                        <th>EMI</th>
-                                                        <th>BT OR Obligate</th>
-                                                        <th>Action</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr style="background-color: green;">
-                                                        <td>1</td>
-                                                        <td>Home Loan</td>
-                                                        <td>Yes</td>
-                                                        <td>₹10,00,000</td>
-                                                        <td>₹80,000</td>
-                                                        <td>₹12,000</td>
-                                                        <td>BT</td>
-                                                        <td><button class="btn btn-success">Add More</button></td>
-                                                    </tr>
-                                                    <tr style="background-color: red;">
-                                                        <td>2</td>
-                                                        <td>Home Loan</td>
-                                                        <td>Yes</td>
-                                                        <td>₹10,00,000</td>
-                                                        <td>₹50,000</td>
-                                                        <td>₹10,000</td>
-                                                        <td>Obligation</td>
-                                                        <td><button class="btn btn-success">Add More</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td> <select class="form-control"
-                                                                data-placeholder="Choose a Category" tabindex="1">
-                                                                <option value="">Select Product</option>
-                                                                <option value="Category 1">PL & OD Leads</option>
-                                                                <option value="Category 2">Home Loans Leads</option>
-                                                            </select></td>
-                                                        <td>
-                                                            <input type="text" placeholder="" class="form-control">
-                                                        </td>
-                                                        <td> <input type="text" placeholder="" class="form-control">
-                                                        </td>
-                                                        <td> <input type="text" placeholder="" class="form-control">
-                                                        </td>
-                                                        <td> <input type="text" placeholder="" class="form-control">
-                                                        </td>
-                                                        <td> <select class="form-control"
-                                                                data-placeholder="Choose a Category" tabindex="1">
-                                                                <option value="">Select Product</option>
-                                                                <option value="Category 1">BT</option>
-                                                                <option value="Category 2">Obligation</option>
-                                                            </select></td>
-                                                        <td><button class="btn btn-success">Add More</button></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td class="total_text_table_footer" colspan="4">Total</td>
-                                                        <td class="total_text_table_footer" colspan="1">₹80,000</td>
-                                                        <td class="total_text_table_footer" colspan="3">₹10,000</td>
-                                                    </tr>
-                                                </tbody>
-
-                                            </table>
-                                        </div>
-                                    </div>
-
                                 </div>
                                 <div class="tab-pane fade all_tabs_bg" id="leads_activety">
                                     <div class="boligation_tabls">
@@ -552,332 +426,6 @@
                                             <li class="clearfix"></li>
 
                                         </ul>
-                                    </div>
-                                </div>
-                                <div class="tab-pane fade all_tabs_bg" id="Login_form">
-                                    <div class="boligation_tabls">
-                                        <div class="row">
-                                            <div class="col-sm-12">
-                                                <button class="btn" id="download_login_form">Download as pdf</button>
-                                            </div>
-                                        </div>
-                                        <form id="form-container">
-                                            <div class="row">
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE NAME USE FOR
-                                                            LOGIN
-                                                            CALL</label>
-                                                        <input type="text" class="form-control" disabled=""
-                                                            value="Saurabh">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">Addhar number</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">Qualifiaction</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">CUSTOMER NAME</label>
-                                                        <input type="text" class="form-control" disabled=""
-                                                            value="Saurabh">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">Pan card Number</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">SALARY ACCOUNT BANK
-                                                            NAME</label>
-                                                        <div class="controls">
-                                                            <select class="form-control"
-                                                                data-placeholder="Choose a Category" tabindex="1">
-                                                                <option value="">Select Product</option>
-                                                                <option value="Category 1">PL Leads</option>
-                                                                <option value="Category 1">OD Leads</option>
-                                                                <option value="Category 2">Home Loans Leads</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-
-
-                                                </div>
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">Mobile Number</label>
-                                                        <input type="text" class="form-control" disabled=""
-                                                            value="9099877665">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">DOB</label>
-                                                        <input type="date" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">Account Number</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-
-                                                </div>
-
-                                                <div class="col-md-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">Alt Mobile
-                                                            Number</label>
-                                                        <input type="text" class="form-control" disabled=""
-                                                            value="9099877665">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">Father Name</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">IFSC Code</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-sm-12">
-                                                    <h5>This Link Share to Customer to fill there deatils <a href="">
-                                                            Share</a>
-                                                    </h5>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">MOTHER NAME</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">MARITAL STATUS</label>
-                                                        <select class="form-control">
-                                                            <option value="">Select</option>
-                                                            <option value="Single">Single</option>
-                                                            <option value="Married">Married</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">SPOUSE NAME</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">SPOUSE DOB</label>
-                                                        <input type="date" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">CURRENT ADDRESS</label>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">CURRENT ADDRESS
-                                                            LANDMARK</label>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">CURRENT ADDRESS
-                                                            TYPE</label>
-                                                        <select class="form-control">
-                                                            <option value="">Select</option>
-                                                            <option value="Owned">Owned</option>
-                                                            <option value="Rented">Rented</option>
-                                                            <option value="Company Provided">Company Provided</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">CURRENT ADDRESS
-                                                            PROOF</label>
-                                                        <select class="form-control">
-                                                            <option value="">Select</option>
-                                                            <option value="Aadhar">Aadhar</option>
-                                                            <option value="Utility Bill">Utility Bill</option>
-                                                            <option value="Rental Agreement">Rental Agreement</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">NUMBER OF YEARS LIVING
-                                                            IN
-                                                            CURRENT ADDRESS</label>
-                                                        <input type="number" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">NUMBER OF YEARS LIVING
-                                                            IN
-                                                            CURRENT CITY</label>
-                                                        <input type="number" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">PERMANENT
-                                                            ADDRESS</label>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">PERMANENT ADDRESS
-                                                            LANDMARK</label>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">COMPANY NAME</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">YOUR DESIGNATION</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">YOUR DEPARTMENT</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">DOJ IN CURRENT
-                                                            COMPANY</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">CURRENT WORK
-                                                            EXPEIRINCE</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">TOTAL WORK
-                                                            EXPERINCE</label>
-                                                        <input type="text" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">PERSONAL EMAIL</label>
-                                                        <input type="email" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">work EMAIL</label>
-                                                        <input type="email" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">office ADDRESS</label>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-6">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">office ADDRESS
-                                                            LANDMARK</label>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <h5 style="color: #03b0f5 !important;">1st Reference</h5>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE NAME</label>
-                                                        <input type="email" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE mobile
-                                                            number</label>
-                                                        <input type="email" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE
-                                                            RELATION</label>
-                                                        <select class="form-control">
-                                                            <option value="">Select</option>
-                                                            <option value="Friend">Friend</option>
-                                                            <option value="Relative">Relative</option>
-                                                            <option value="Colleague">Colleague</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE
-                                                            ADDRESS</label>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-12">
-                                                    <h5 style="color: #03b0f5 !important;">2nd Reference</h5>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE NAME</label>
-                                                        <input type="email" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE mobile
-                                                            number</label>
-                                                        <input type="email" class="form-control">
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE
-                                                            RELATION</label>
-                                                        <select class="form-control">
-                                                            <option value="">Select</option>
-                                                            <option value="Friend">Friend</option>
-                                                            <option value="Relative">Relative</option>
-                                                            <option value="Colleague">Colleague</option>
-                                                        </select>
-                                                    </div>
-                                                </div>
-                                                <div class="col-sm-3">
-                                                    <div class="form-group">
-                                                        <label class="control-label text-light">REFERENCE
-                                                            ADDRESS</label>
-                                                        <textarea class="form-control"></textarea>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </form>
                                     </div>
                                 </div>
                                 <div class="tab-pane fade all_tabs_bg" id="Task">
@@ -940,86 +488,32 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="tab-pane fade all_tabs_bg" id="Remark">
-                                    <div class="boligation_tabls">
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <h3 class="label_color_text">Remark</h3>
-                                            </div>
-                                            <div class="col-md-12">
-                                                <ul class="messages messages-stripped">
-                                                    <li>
-                                                        <img src="img/demo/avatar/avatar2.jpg" alt="">
-                                                        <div>
-                                                            <div>
-                                                                <h5 class="theam_color">Saurabh</h5>
-                                                                <span class="time"><i class="fa fa-clock-o"></i>
-                                                                    26 sec
-                                                                    ago</span>
-                                                            </div>
-                                                            <p>Saurabh Make Same Changes</p>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-
-                                                <div class="messages-input-form">
-                                                    <form method="POST" action="#">
-                                                        <div class="input">
-                                                            <input type="text" name="text" placeholder="Write here..."
-                                                                class="form-control">
-                                                        </div>
-                                                        <div class="buttons">
-                                                            <button type="submit" class="btn btn-primary"><i
-                                                                    class="fa fa-share"></i></button>
-                                                        </div>
-                                                    </form>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
                                 <div class="tab-pane fade all_tabs_bg" id="Attachement">
                                     <div class="boligation_tabls">
                                         <div class="row">
-                                            <div class="col-sm-3">
-                                                <div class="form-group">
-                                                    <label class="control-label text-light">DOCUMENTS</label>
-                                                    <input type="file" name="candidate_documents" class="form-control"
-                                                        multiple="">
+                                            <form action="">
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label class="control-label text-light">DOCUMENTS</label>
+                                                        <input type="file" name="candidate_documents"
+                                                            class="form-control" multiple="" required>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-3">
-                                                <div class="form-group">
-                                                    <label class="control-label text-light">Interview Recording</label>
-                                                    <input type="file" name="interview_recording" class="form-control">
+                                                <div class="col-sm-3">
+                                                    <div class="form-group">
+                                                        <label class="control-label text-light">Interview
+                                                            Recording</label>
+                                                        <input type="file" name="interview_recording"
+                                                            class="form-control" accept="audio/*" required>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-sm-12">
-                                                <button class="btn btn-primary text-white btn_attachment_update"
-                                                    style="float:right;font-weight:bold;font-size:20px;"
-                                                    type="submit">Save</button>
-                                            </div>
+                                                <div class="col-sm-12">
+                                                    <button class="btn btn-primary text-white btn_attachment_update"
+                                                        style="float:right;font-weight:bold;font-size:20px;"
+                                                        type="submit">Save</button>
+                                                </div>
+                                            </form>
                                         </div>
-
-                                        <!-- <div class="row">
-                                            <div class="col-md-12">
-                                                <h3 class="label_color_text">All Attachement</h3>
-                                            </div>
-
-                                            <div class="col-md-4 ">
-                                                <div class="card task_card ">
-                                                    <div class="car-header">
-                                                        <h5 class="label_color_text">Timing</h5>
-                                                        <p>Today , 12:14 Am</p>
-                                                    </div>
-                                                    <div class="car-header"
-                                                        style="margin-bottom: 10px; justify-content: end;">
-                                                        <button class="btn">View</button>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div> -->
                                     </div>
                                 </div>
 
@@ -1068,11 +562,16 @@
     <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
     <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
     <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
+
     <script>
         $(document).ready(function () {
             $('#openModalBtn').on('click', function () {
                 $('#modalTitle').text('Add Task');
                 $('#myModal').modal('show');
+            });
+
+            $('.open-modal-btn').on('click', function () {
+                $('#myModal2').modal('show');
             });
 
             $('#saveChangesBtn').on('click', function () {
@@ -1359,6 +858,120 @@
             <div class="modal-footer">
 
             </div>
+        </div>
+    </div>
+</div>
+
+
+<!--
+-----------------------------------------------------------------------------------------------------------
+Interview Reschedule Modal
+-----------------------------------------------------------------------------------------------------------
+-->
+<!-- modal for Interview Reschedule -->
+<div id="myModal2" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="color: black;" id="modalTitle">Candidate Details</h4>
+            </div>
+            <div class="modal-body">
+                <div class="col-md-12">
+                    <form class="mail-compose form-horizontal" action="#">
+                        <div class="col-sm-12">
+                            <label class="control-label">Candidate Id</label>
+                            <input type="text" placeholder="Name" class="form-control" value="01" readonly>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Candidate Name</label>
+                            <input type="text" placeholder="Name" class="form-control" value="Abhishek Kumar">
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Number</label>
+                            <input type="text" placeholder="Number" class="form-control" value="+91 1234567890">
+                        </div>
+
+                        <p class="row">
+                        <div class="col-sm-6">
+                            <label class="control-label">Select Gender</label>
+                            <div class="controls">
+                                <select class="form-control" data-placeholder="Choose a Gender" tabindex="1">
+                                    <option value="">Select Gender</option>
+                                    <option value="male" selected>Male</option>
+                                    <option value="1female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label class="control-label">Job Portal</label>
+                            <div class="controls">
+                                <select class="form-control" data-placeholder="Choose a Portal" tabindex="1">
+                                    <option value="">Select Job Portal</option>
+                                    <option value="porta" selected>Portal A</option>
+                                    <option value="portb">Portal B</option>
+                                </select>
+                            </div>
+                        </div>
+                        </p>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Pincode & City</label>
+                            <input type="text" placeholder="City" class="form-control" value="201413 , New Delhi">
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Salary Expectation</label>
+                            <input type="text" placeholder="Salary Expectation" class="form-control" value="20,000">
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Exprience In Year</label>
+                            <input type="text" placeholder="Exprience In Year" class="form-control" value="5">
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Last Salary</label>
+                            <input type="text" placeholder="Last Salary" class="form-control" value="15000">
+                        </div>
+
+                        <p class="row">
+                        <div class="col-sm-6">
+                            <label class="control-label">Previous Interview Date</label>
+                            <input type="text" class="form-control" value="20-02-2025" readonly>
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="control-label">Previous Interview Time</label>
+                            <input type="text" class="form-control" value="07:00 PM" readonly>
+                        </div>
+                        </p>
+
+                        <p class="row">
+                        <div class="col-sm-6">
+                            <label class="control-label">New Interview Date</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="col-sm-6">
+                            <label class="control-label">New Interview Time</label>
+                            <input type="time" class="form-control">
+                        </div>
+                        </p>
+
+                        <p style="margin-top: 10px;"><textarea class="form-control wysihtml5" rows="6"></textarea></p>
+
+                        <p>
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-rocket"></i>
+                                Add</button>
+                            <a type="button" class="btn">Cancel</a>
+                        </p>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer"></div>
         </div>
     </div>
 </div>

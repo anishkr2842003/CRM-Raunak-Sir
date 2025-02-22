@@ -29,11 +29,6 @@
     <link rel="stylesheet" type="text/css" href="assets/bootstrap-switch/static/stylesheets/bootstrap-switch.css">
     <link rel="stylesheet" type="text/css" href="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css">
 
-    <!-- modal -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script> -->
-
     <style>
         .table.table-advance,
         .table.table-advance th,
@@ -124,6 +119,136 @@
             display: flex;
             align-items: center;
             justify-content: space-around;
+        }
+    </style>
+
+    <style>
+        .table-margin {
+            margin-top: 60px;
+        }
+
+        .table-container {
+            border: 0;
+            overflow-x: auto;
+            white-space: nowrap;
+        }
+
+        .custom-table {
+            width: 100%;
+        }
+
+        .name-header {
+            width: 100px;
+            color: aliceblue !important;
+        }
+
+        .day-header {
+            color: aliceblue !important;
+        }
+
+        .name-cell {
+            font-size: 17px;
+        }
+
+        .name-text {
+            font-size: 17px;
+        }
+
+        .green-bg {
+            background-image: linear-gradient(green, #49e663);
+        }
+
+        .orange-bg {
+            background-image: linear-gradient(orange, #e9ae40);
+        }
+
+        .red-bg {
+            background-image: linear-gradient(red, #ee3232);
+        }
+
+        .yellow-bg {
+            background-image: linear-gradient(yellow, #9e9e29);
+            color: black !important;
+        }
+    </style>
+
+<!-- Attendance Details Modal -->
+    <style>
+        .ak_container {
+            background-color: #fff;
+            padding: 20px;
+            border: 1px solid black;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            /* width: 400px; */
+        }
+
+        .ak_heading {
+            text-align: center;
+            margin-bottom: 20px;
+            color: black;
+            font-weight: bold;
+        }
+
+        .ak_input_group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px;
+        }
+
+        .ak_input_group input {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        .ak_input_group input[type="number"] {
+            width: 80px;
+        }
+
+        .ak_minus {
+            background-color: #dc3545;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .ak_minus:hover {
+            background-color: #c82333;
+        }
+
+        #ak_plusBtn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        #ak_plusBtn:hover {
+            background-color: #218838;
+        }
+
+        .ak_total_box {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .ak_error {
+            color: #dc3545;
+            font-size: 14px;
+            margin-top: 10px;
+            text-align: center;
         }
     </style>
 
@@ -325,13 +450,14 @@
                             <div class="btn-group btn btn-pill" role="group" aria-label="..."><a
                                     href='hrms_dashboard.html'>Dashboard</a>
                             </div>
-                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Interviews</a>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a
+                                    href="finial_interview.html">Interviews</a>
                             </div>
                             <div class="btn-group btn btn-pill" role="group" aria-label="..."><a
-                                    href='add_employee.html'>Add
-                                    Employee</a>
+                                    href='add_employee.html'>Add Employee</a>
                             </div>
-                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Attendence</a>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a
+                                    href="finial_attendance.html">Attendence</a>
                             </div>
                             <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Target</a>
                             </div>
@@ -370,28 +496,11 @@
                 <div class="page-title">
                     <div>
                         <h1 class="theam_color_text">
-                            <i class="fa fa-home theam_color"></i> HRMS Dashboard
+                            <i class="fa fa-user theam_color"></i> Employee Name
                         </h1>
                     </div>
                 </div>
                 <!-- BEGIN Main Content -->
-                <!-- <div class="row">
-            <div class="col-lg-12" style="display: flex; justify-content: end">
-              <button type="button" class="btn btn-light" id="openModalBtn3">
-                Leave
-              </button>
-              <button type="button" style="margin-left: 8px" class="btn btn-info" id="openModalBtn">
-                Punch In
-              </button>
-              <button
-                class="btn btn-success"
-                id="openModalBtn1"
-                style="margin-left: 8px"
-              >
-                Punch Out
-              </button>
-            </div>
-          </div> -->
                 <div class="row" style="margin-top: 20px">
                     <div class="col-lg-3">
                         <div class="card punch_card">
@@ -421,178 +530,92 @@
 
                 <!-- table start -->
                 <div class="row">
-                    <div class="col-md-12" style="margin-top: 60px">
-                        <div class="table-responsive table-container"
-                            style="border: 0; overflow-x: auto; white-space: nowrap">
-                            <table class="table table-advance" id="table1" style="width: 1500px;">
+                    <div class="col-md-12 table-margin">
+                        <div class="table-responsive table-container">
+                            <table class="table table-advance custom-table" id="table1">
                                 <thead>
                                     <tr>
-                                        <th style="width: 100px; color: aliceblue !important;">Name</th>
-                                        <th style="color: aliceblue !important;">1 Sat</th>
-                                        <th style="color: aliceblue !important;">2 Sun</th>
-                                        <th style="color: aliceblue !important;" class="sorting_disabled">3 Mon</th>
-                                        <th style="color: aliceblue !important;" class="sorting_disabled">4 Tue</th>
-                                        <th style="color: aliceblue !important;">5 Wed</th>
-                                        <th style="color: aliceblue !important;">6 Thu</th>
-                                        <th style="color: aliceblue !important;">7 Fri</th>
-                                        <th style="color: aliceblue !important;">8 Sat</th>
-                                        <th style="color: aliceblue !important;">9 Sun</th>
-                                        <th style="color: aliceblue !important;">10 Mon</th>
-                                        <th style="color: aliceblue !important;">11 Tue</th>
-                                        <th style="color: aliceblue !important;">12 Wed</th>
-                                        <th style="color: aliceblue !important;">13 Thu</th>
-                                        <th style="color: aliceblue !important;">14 Fri</th>
-                                        <th style="color: aliceblue !important;">15 Sat</th>
-                                        <th style="color: aliceblue !important;">16 Sun</th>
-                                        <th style="color: aliceblue !important;">17 Mon</th>
-                                        <th style="color: aliceblue !important;">18 Tue</th>
-                                        <th style="color: aliceblue !important;">19 Wed</th>
-                                        <th style="color: aliceblue !important;">20 Thu</th>
-                                        <th style="color: aliceblue !important;">21 Fri</th>
-                                        <th style="color: aliceblue !important;">22 Sat</th>
-                                        <th style="color: aliceblue !important;">23 Sun</th>
-                                        <th style="color: aliceblue !important;">24 Mon</th>
-                                        <th style="color: aliceblue !important;">25 Tue</th>
-                                        <th style="color: aliceblue !important;">26 Wed</th>
-                                        <th style="color: aliceblue !important;">27 Thu</th>
-                                        <th style="color: aliceblue !important;">28 Fri</th>
-                                        <th style="color: aliceblue !important;">29 Sat</th>
-                                        <th style="color: aliceblue !important;">30 Sun</th>
-                                        <th style="color: aliceblue !important;">paid leave</th>
-                                        <th style="color: aliceblue !important;">Total Present</th>
+                                        <th class="name-header">Name</th>
+                                        <th class="day-header">1 Sat</th>
+                                        <th class="day-header">2 Sun</th>
+                                        <th class="day-header sorting_disabled">3 Mon</th>
+                                        <th class="day-header sorting_disabled">4 Tue</th>
+                                        <th class="day-header">5 Wed</th>
+                                        <th class="day-header">6 Thu</th>
+                                        <th class="day-header">7 Fri</th>
+                                        <th class="day-header">8 Sat</th>
+                                        <th class="day-header">9 Sun</th>
+                                        <th class="day-header">10 Mon</th>
+                                        <th class="day-header">11 Tue</th>
+                                        <th class="day-header">12 Wed</th>
+                                        <th class="day-header">13 Thu</th>
+                                        <th class="day-header">14 Fri</th>
+                                        <th class="day-header">15 Sat</th>
+                                        <th class="day-header">16 Sun</th>
+                                        <th class="day-header">17 Mon</th>
+                                        <th class="day-header">18 Tue</th>
+                                        <th class="day-header">19 Wed</th>
+                                        <th class="day-header">20 Thu</th>
+                                        <th class="day-header">21 Fri</th>
+                                        <th class="day-header">22 Sat</th>
+                                        <th class="day-header">23 Sun</th>
+                                        <th class="day-header">24 Mon</th>
+                                        <th class="day-header">25 Tue</th>
+                                        <th class="day-header">26 Wed</th>
+                                        <th class="day-header">27 Thu</th>
+                                        <th class="day-header">28 Fri</th>
+                                        <th class="day-header">29 Sat</th>
+                                        <th class="day-header">30 Sun</th>
+                                        <th class="day-header">Paid Leave</th>
+                                        <th class="day-header">Total Present</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td> <span style="font-size: 17px;"><b>Ravindra</b></span> <br>
-                                            <span>Achievers | Sr. Executive</span>
-                                            <br>
-                                            <span>Emp-ID :</span>
-                                            <span>RM02</span>
+                                        <td class="name-cell">
+                                            <span class="name-text"><b>Ravindra</b></span><br>
+                                            <span>Achievers | Sr. Executive</span><br>
+                                            <span>Emp-ID : RM02</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(orange, #e9ae40);"> <b>0</b> <br>
-                                            <span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal red-bg"><b>-1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal yellow-bg"><b>0.5</b><br><span>6:00am | 12:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(red, #ee3232);"> <b>-1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal yellow-bg"><b>0.5</b><br><span>6:00am | 12:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(yellow, #9e9e29); color: black !important;">
-                                            <b>0.5</b>
-                                            <br> <span>6:00am | 12:00pm</span>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
+                                        <td class="opentdModal yellow-bg"><b>0.5</b><br><span>6:00am | 12:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(orange, #e9ae40);"> <b>0</b> <br>
-                                            <span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal yellow-bg"><b>0.5</b><br><span>6:00am | 12:00pm</span>
                                         </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(yellow, #9e9e29); color: black !important;">
-                                            <b>0.5</b>
-                                            <br> <span>6:00am | 12:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(orange, #e9ae40);"> <b>0</b> <br>
-                                            <span>00:00am | 00:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(orange, #e9ae40);"> <b>0</b> <br>
-                                            <span>00:00am | 00:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(yellow, #9e9e29); color: black !important;">
-                                            <b>0.5</b>
-                                            <br> <span>6:00am | 12:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(orange, #e9ae40);"> <b>0</b> <br>
-                                            <span>00:00am | 00:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(yellow, #9e9e29); color: black !important;">
-                                            <b>0.5</b>
-                                            <br> <span>6:00am | 12:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(green, #49e663);"> <b>1</b> <br>
-                                            <span>6:00am | 7:00pm</span>
-                                        </td>
-                                        <td class="opentdModal"
-                                            style="background-image: linear-gradient(orange, #e9ae40);"> <b>0</b> <br>
-                                            <span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
+                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
                                         </td>
                                         <td>5</td>
                                         <td>25</td>
@@ -630,6 +653,7 @@
     <script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
     <script type="text/javascript" src="assets/data-tables/bootstrap3/dataTables.bootstrap.js"></script>
     <!--flaty scripts-->
+
     <script src="js/flaty.js"></script>
     <script src="js/flaty-demo-codes.js"></script>
     <script type="text/javascript" src="assets/chosen-bootstrap/chosen.jquery.min.js"></script>
@@ -649,7 +673,9 @@
     <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
     <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
     <script src="ckeditor5/39.0.1/classic/ckeditor.js"></script>
-
+    <!-- jQuery & Bootstrap Script -->
+    <script src="bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- editor thing -->
     <script>
         ClassicEditor.create(document.querySelector("#editor"))
             .then((editor) => {
@@ -801,93 +827,12 @@
     });
 </script>
 
-
-
-<!-- punch in Modal -->
-
-
-
-
-
-
-<!-- Second Modal -->
-<div id="secondModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">
-                    &times;
-                </button>
-                <h4 class="modal-title text-center" style="color: black; font-weight: bold">
-                    Today Commitment
-                </h4>
-            </div>
-            <div class="modal-body">
-                <label class="text-dark control-label" style="font-weight: bold">
-                    Today Login's</label>
-                <input type="text" placeholder="" style="font-weight: bold" class="form-control">
-                <div>
-                    <h4 class="modal-title text-center"
-                        style="color: black; font-weight: bold; margin-top: 20px !important">
-                        Today Work ToDo
-                    </h4>
-                    <p style="margin-top: 25px; font-weight: bold">
-                        1. All Workers name show here
-                    </p>
-                </div>
-                <i class="fa fa-comment theam_color" style="font-size: 25px; cursor: pointer"
-                    onclick="toggleCommentBox()"></i>
-                <div id="commentBox" style="display: none" class="comment-box">
-                    <textarea placeholder="Write a comment..."
-                        style="width: 100%; height: 100px; margin-top: 15px"></textarea>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-info">Save</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">
-                    Close
-                </button>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- commentbox hide and show -->
-<script>
-    function toggleCommentBox() {
-        var box = document.getElementById("commentBox");
-        if (box.style.display === "none" || box.style.display === "") {
-            box.style.display = "block";
-        } else {
-            box.style.display = "none";
-        }
-    }
-</script>
-
-<!-- jQuery Script to Handle Modal Transition -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-
-<!-- punch in modal submit button -->
-<script>
-    $(document).ready(function () {
-        $("#submitBtn").click(function () {
-            $("#myModal").modal("hide"); // Hide the first modal
-            setTimeout(function () {
-                $("#secondModal").modal("show"); // Show the second modal
-            }, 500); // Small delay to ensure smooth transition
-        });
-    });
-</script>
-
 <!-- time store -->
 <script>
     document
         .getElementById("openModalBtn")
         .addEventListener("click", function () {
-            // Get the current time
             let currentTime = new Date().toLocaleTimeString();
-
-            // Store the current time in the input field
             document.getElementById("timeInput").value = currentTime;
         });
 </script>
@@ -898,8 +843,8 @@
 punch in modal
 -----------------------------------------------------------------------------------------------------------
 -->
-<!-- punch in Modal -->
-<!-- punch in Modal -->
+<!-- Punch In Modal -->
+<!-- Punch In Modal -->
 <!-- Punch In Modal -->
 <div id="myModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
@@ -956,7 +901,7 @@ punch in modal
     </div>
 </div>
 
-<!--  punch in moodal open  -->
+<!--  punch in modal open  -->
 <script>
     const openModalBtn = document.getElementById("openModalBtn");
     const video = document.getElementById("camera");
@@ -1064,6 +1009,62 @@ punch in modal
 
         $("#myModal").on("hidden.bs.modal", function () {
             console.log("Modal has been closed.");
+        });
+    });
+</script>
+
+<!--  After punch modal  -->
+<div id="secondModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                </button>
+                <h4 class="modal-title text-center" style="color: black; font-weight: bold">
+                    Today Commitment
+                </h4>
+            </div>
+            <div class="modal-body">
+                <label class="text-dark control-label" style="font-weight: bold">
+                    Today Login's</label>
+                <input type="text" placeholder="" style="font-weight: bold" class="form-control">
+                <div>
+                    <h4 class="modal-title text-center"
+                        style="color: black; font-weight: bold; margin-top: 20px !important">
+                        Today Work ToDo
+                    </h4>
+                    <p>1. Work 1</p>
+                    <p>2. Work 2</p>
+                    <p>3. Work 3</p>
+                </div>
+                <hr>
+                <!-- <i class="fa fa-comment theam_color" style="font-size: 25px; cursor: pointer"></i>  -->
+                <p style="font-weight: bold; margin: 0px;">
+                    Write Comment Here
+                </p>
+                <div id="commentBox" class="comment-box">
+                    <textarea placeholder="Write a comment..." style="width: 100%; height: 100px;"></textarea>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-info">Save</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- punch in modal submit button -->
+<script>
+    $(document).ready(function () {
+        $("#submitBtn").click(function () {
+            $("#myModal").modal("hide"); // Hide the first modal
+            setTimeout(function () {
+                $("#secondModal").modal("show"); // Show the second modal
+            }, 500); // Small delay to ensure smooth transition
         });
     });
 </script>
@@ -1249,185 +1250,25 @@ punch out modal
 
 </script>
 
-<!-- punch out modal -->
+<!-- punch out store time -->
 <script>
-    $(document).ready(function () {
-        $("#openModalBtn1").on("click", function () {
-            $("#modalTitle1").text("Add Task");
-            $("#myModal1").modal("show");
-        });
+    $("#myModal1").on("show.bs.modal", function () {
+        var currentDateTime = new Date();
+        var formattedDateTime = currentDateTime.toLocaleString();
 
-        $("#saveChangesBtn1").on("click", function () {
-            alert("Your changes have been saved!");
-            $("#myModal1").modal("hide");
-        });
+        // Set the formatted date-time in the input field
+        $(this).find('input[type="text"]').val(formattedDateTime);
+    });
 
-        $("#myModal1").on("shown.bs.modal", function () {
-            console.log("Modal is now fully visible!");
-        });
+    $("#captureBtn1").on("click", function () {
+    });
 
-        $("#myModal1").on("hidden.bs.modal", function () {
-            console.log("Modal has been closed.");
-        });
+    // Optional: Submit button click event
+    $("#submitBtn1").on("click", function () {
     });
 </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- punch out modal -->
-<!-- First Modal -->
-
-
-<!-- Second Modal -->
+<!-- After Punch out modal -->
 <div id="myModal2" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -1447,19 +1288,29 @@ punch out modal
                 </div>
             </div>
             <div class="modal-body">
-                <div style="margin-top: 20px">
+                <!-- <div style="margin-top: 20px">
                     <label class="text-dark control-label" style="font-weight: bold">
                         Your working hour</label>
                     <input type="text" placeholder="" style="font-weight: bold" class="form-control">
+                </div> -->
+                <div class="ak_container">
+                    <h2 class="ak_heading">Your Working Hour</h2>
+                    <div id="ak_inputContainer">
+                        <!-- Input boxes will be added here -->
+                    </div>
+                    <button id="ak_plusBtn">+ Add Work History</button>
+                    <div class="ak_total_box">
+                        Total Working Hours: <span id="ak_totalHours">0</span>
+                    </div>
+                    <div id="ak_errorMessage" class="ak_error"></div>
                 </div>
                 <div style="margin-top: 20px">
-                    <i class="fa fa-comment theam_color" style="font-size: 25px; cursor: pointer"
-                        onclick="toggleCommentBox1()"></i>
-                    <div id="commentBox1" style="display: none" class="comment-box">
-                        <textarea placeholder="Explain your work here..."
-                            style="width: 100%; height: 100px; margin-top: 15px"></textarea>
+                    <p style="font-weight: bold; margin: 0px;">
+                        Write Comment Here
+                    </p>
+                    <div id="commentBox" class="comment-box">
+                        <textarea placeholder="Write a comment..." style="width: 100%; height: 100px;"></textarea>
                     </div>
-                    <!-- <textarea placeholder="Explain your work here..." style="width: 100%; height: 100px; margin-top: 15px;" id="comment"></textarea> -->
                 </div>
                 <div style="margin-top: 20px">
                     <h4 class="text-center" style="color: black; font-weight: bold">
@@ -1489,77 +1340,117 @@ punch out modal
     </div>
 </div>
 
-<!-- commentbox hide and show -->
-<script>
-    function toggleCommentBox1() {
-        var box = document.getElementById("commentBox1");
-        if (box.style.display === "none" || box.style.display === "") {
-            box.style.display = "block";
-        } else {
-            box.style.display = "none";
-        }
-    }
-</script>
 
-<!-- jQuery & Bootstrap Script -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
-<script src="bootstrap/3.4.1/js/bootstrap.min.js"></script>
-
+<!-- punch out modal -->
 <script>
     $(document).ready(function () {
-        $("#submitBtn1").click(function () {
-            $("#myModal1").modal("hide"); // Hide first modal
-            setTimeout(function () {
-                $("#myModal2").modal("show"); // Show second modal
-            }, 500); // Delay to ensure smooth transition
+        $("#openModalBtn1").on("click", function () {
+            $("#modalTitle1").text("Add Task");
+            $("#myModal1").modal("show");
+        });
+
+        $("#saveChangesBtn1").on("click", function () {
+            alert("Your changes have been saved!");
+            $("#myModal1").modal("hide");
+        });
+
+        $("#myModal1").on("shown.bs.modal", function () {
+            console.log("Modal is now fully visible!");
+        });
+
+        $("#myModal1").on("hidden.bs.modal", function () {
+            console.log("Modal has been closed.");
         });
     });
 </script>
 
-<!-- punch out store time -->
-<!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+<!--
+-----------------------------------------------------------------------------------------------------------
+add multiple boxes for add your work time
+-----------------------------------------------------------------------------------------------------------
+-->
+
 <script>
-    // Function to set current date and time when the modal is shown
-    $("#myModal1").on("show.bs.modal", function () {
-        var currentDateTime = new Date();
-        var formattedDateTime = currentDateTime.toLocaleString(); // This will get the current date and time in the default format of your locale
+    const inputContainer = document.getElementById('ak_inputContainer');
+    const totalHoursSpan = document.getElementById('ak_totalHours');
+    const plusBtn = document.getElementById('ak_plusBtn');
+    const errorMessage = document.getElementById('ak_errorMessage');
 
-        // Set the formatted date-time in the input field
-        $(this).find('input[type="text"]').val(formattedDateTime);
-    });
+    // Function to update total hours
+    function updateTotalHours() {
+        const hourInputs = document.querySelectorAll('.ak_input_group input[type="number"]');
+        let total = 0;
+        hourInputs.forEach(input => {
+            total += parseFloat(input.value) || 0;
+        });
+        totalHoursSpan.textContent = total;
 
-    // Optional: Capture button click event
-    $("#captureBtn1").on("click", function () {
-        // Your capture logic here
-    });
+        // Validate total hours (not more than 7)
+        if (total > 7) {
+            errorMessage.textContent = "Total working hours cannot exceed 7 hours!";
+            plusBtn.disabled = true; // Disable "+" button
+        } else {
+            errorMessage.textContent = "";
+            plusBtn.disabled = false; // Enable "+" button
+        }
+    }
 
-    // Optional: Submit button click event
-    $("#submitBtn1").on("click", function () {
-        // Your submit logic here
+    // Function to create a new input box group
+    function createInputGroup() {
+        const inputGroup = document.createElement('div');
+        inputGroup.className = 'ak_input_group';
+        inputGroup.innerHTML = `
+            <input type="text" placeholder="Work description">
+            <input type="number" placeholder="Hours" min="0">
+            <button class="ak_minus">-</button>
+        `;
+
+        // Add event listener to the minus button
+        inputGroup.querySelector('.ak_minus').addEventListener('click', () => {
+            if (inputContainer.children.length > 1) {
+                inputGroup.remove();
+                updateTotalHours();
+            } else {
+                errorMessage.textContent = "At least one input box must remain!";
+            }
+        });
+
+        // Update total when hours input changes
+        inputGroup.querySelector('input[type="number"]').addEventListener('input', updateTotalHours);
+
+        return inputGroup;
+    }
+
+    // Add initial input box
+    inputContainer.appendChild(createInputGroup());
+
+    // Add new input box when "+" button is clicked
+    plusBtn.addEventListener('click', () => {
+        inputContainer.appendChild(createInputGroup());
+        updateTotalHours();
     });
 </script>
 
 
+<script>
+    $(document).ready(function () {
+        $("#submitBtn1").click(function () {
+            $("#myModal1").modal("hide");
+            setTimeout(function () {
+                $("#myModal2").modal("show");
+            }, 500);
+        });
+    });
+</script>
 
 
+<!--
+-----------------------------------------------------------------------------------------------------------
+Attendance Details Modal
+-----------------------------------------------------------------------------------------------------------
+-->
 
-
-
-<!-- td modal -->
-<!-- <div id="tdModal" class="modal fade" role="dialog">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" style="color: black;">Ravindra</h4>
-                <p>Achievers | Sr. Executive</p>
-                <p>Emp-ID : RM02</p>
-            </div>
-            <div class="modal-body">
-            </div>
-        </div>
-    </div>
-</div> -->
 <div id="tdModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
