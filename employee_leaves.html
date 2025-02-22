@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dashboard - Employee Leave</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--base css styles-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!-- css styles-->
+    <link rel="stylesheet" href="css/flaty.css">
+    <link rel="stylesheet" href="css/flaty-responsive.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="assets/data-tables/bootstrap3/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/chosen-bootstrap/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/jquery-tags-input/jquery.tagsinput.css">
+    <link rel="stylesheet" type="text/css" href="assets/jquery-pwstrength/jquery.pwstrength.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-fileupload/bootstrap-fileupload.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-duallistbox/duallistbox/bootstrap-duallistbox.css">
+    <link rel="stylesheet" type="text/css" href="assets/dropzone/downloads/css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-colorpicker/css/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-timepicker/compiled/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/clockface/css/clockface.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datepicker/css/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-switch/static/stylesheets/bootstrap-switch.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css">
+    <!-- font awesome cdn -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .table-flag-blue td {
+            font-weight: 300;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- BEGIN Navbar -->
+        <div id="" class="navbar">
+            <button type="button" class="navbar-toggle navbar-btn for-nav-horizontal collapsed" data-toggle="collapse"
+                data-target="#nav-horizontal">
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class='navbar-brand ' href='index.htm'>
+                <small>
+                    <i class="fa fa-home"></i>
+                    Home
+                </small>
+            </a>
+
+            <!-- BEGIN Navbar Buttons -->
+            <ul class="nav flaty-nav pull-right">
+                <!-- BEGIN Button User -->
+                <li class="user-profile">
+                    <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+                        <img class="nav-user-photo" src="img/demo/avatar/avatar1.jpg" alt="Penny's Photo">
+                        <span id="user_info">
+                            Admin
+                        </span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <!-- BEGIN User Dropdown -->
+                    <ul class="dropdown-menu dropdown-navbar" id="user_menu">
+                        <li class="nav-header">
+                            <i class="fa fa-clock-o"></i>
+                            Logined From 20:45
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-cog"></i>
+                                Account Settings
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question"></i>
+                                Help
+                            </a>
+                        </li>
+
+                        <li class="divider visible-xs"></li>
+
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-tasks"></i>
+                                Tasks
+                                <span class="badge badge-warning">4</span>
+                            </a>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-bell"></i>
+                                Notifications
+                                <span class="badge badge-important">8</span>
+                            </a>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                Messages
+                                <span class="badge badge-success">5</span>
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="#">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- BEGIN User Dropdown -->
+                </li>
+                <!-- END Button User -->
+            </ul>
+            <ul class="nav flaty-nav navbar-collapse collapse" id="nav-horizontal">
+                <li class="notification_parent_div">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-desktop"></i>
+                        <span class="nav_text_all">Lead CRM</span>
+                        <span class="notification_nav">9+</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar">
+                            <div class="btn-group btn btn-pill" role="group"><a href="">CRM
+                                    Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href='lead_form.html'>Lead Form</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href='show_pl_od_leads.html'>PL & OD
+                                    Leads</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Home Loan
+                                    Leads</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-times"></i>
+                        <span class="nav_text_all">Login CRM</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar">
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href="">PL & OD
+                                    Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Home Loan
+                                    Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-times"></i>
+                        <span class="nav_text_all">HRMS</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar">
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href='hrms_dashboard.html'>Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href="finial_interview.html">Interviews</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href='add_employee.html'>Add Employee</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href="finial_attendance.html">Attendence</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group">
+                                <a href="#">Target</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-times"></i>
+                        <span class="nav_text_all">Tickect</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar">
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Open Ticket</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Close
+                                    Ticket</a>
+                            </div>
+
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-times"></i>
+                        <span class="nav_text_all">Task</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar">
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Login Task</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Leads Task</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-file"></i>
+                        <span class="nav_text_all">Warning</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar">
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href="">PL & OD
+                                    Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group"><a href="">Home Loan
+                                    Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- END Horizontal Menu -->
+
+        </div>
+        <!-- BEGIN Container -->
+        <div class="container" id="main-container">
+            <!-- BEGIN Content -->
+            <div id="main-content">
+                <!-- BEGIN Page Title -->
+                <div class="page-title">
+                    <div style="display: flex; justify-content: space-between;">
+                        <h3 class="theam_color_text"><i class="fa fa-list"></i> Employee Name</h3>
+                        <div class="zxyzz">
+                            <button type="button" class="btn btn-info" id="openModalBtn">
+                                Add Leave
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Title -->
+                <!-- BEGIN Main Content -->
+                <div class="row" style="margin-top: 20px">
+                    <div class="col-lg-3">
+                        <div class="card punch_card">
+                            <h3 class="punch_card_text">All Leaves</h3>
+                            <h4 class="punch_card_text">12</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card punch_card">
+                            <h3 class="punch_card_text">Approved</h3>
+                            <h4 class="punch_card_text">30</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card punch_card">
+                            <h3 class="punch_card_text">Rejected</h3>
+                            <h4 class="punch_card_text">29</h4>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
+                        <div class="card punch_card">
+                            <h3 class="punch_card_text">Pending</h3>
+                            <h4 class="punch_card_text">30</h4>
+                        </div>
+                    </div>
+                </div>
+                <!-- BEGIN Main Content -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tabbable">
+                            <div id="myTabContent1" class="tab-content">
+                                <!-- All Leave -->
+                                <div class="tab-pane fade in active all_tabs_bg" id="all">
+                                    <div class="boligation_tabls">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="table-responsive" style="border:0">
+                                                    <table class="table table-advance" id="table1">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width:18px"><input type="checkbox"></th>
+                                                                <th>Leave Type</th>
+                                                                <th>From</th>
+                                                                <th>To</th>
+                                                                <th>Leave Duration</th>
+                                                                <th>Approved By</th>
+                                                                <th class="text-center">Status</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-flag-blue">
+                                                                <td><input type="checkbox"></td>
+                                                                <td>Medical Issue</td>
+                                                                <td>01 November 2024</td>
+                                                                <td>05 November 2024</td>
+                                                                <td>5 Days</td>
+                                                                <td>Admin</td>
+                                                                <td><a href="#" class="badge"
+                                                                        style="background-color: blue;">Approved</a>
+                                                                </td>
+                                                            </tr>
+                                                            <tr class="table-flag-blue">
+                                                                <td><input type="checkbox"></td>
+                                                                <td>Medical Issue</td>
+                                                                <td>01 November 2024</td>
+                                                                <td>05 November 2024</td>
+                                                                <td>5 Days</td>
+                                                                <td>HR</td>
+                                                                <td><a href="#" class="badge"
+                                                                        style="background-color: red;">Rejected</a></td>
+                                                            </tr>
+                                                            <tr class="table-flag-blue">
+                                                                <td><input type="checkbox"></td>
+                                                                <td>Medical Issue</td>
+                                                                <td>01 November 2024</td>
+                                                                <td>05 November 2024</td>
+                                                                <td>5 Days</td>
+                                                                <td>HR</td>
+                                                                <td><a href="#" class="badge"
+                                                                        style="background-color: red;">Rejected</a></td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END Main Content -->
+            </div>
+            <!-- END Content -->
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>2024 © Admin Template.</p>
+        </footer>
+        <!-- Scroll Up Button -->
+        <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!--basic scripts-->
+    <script src="ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/jquery/jquery-2.1.1.min.js"><\/script>')</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/jquery-cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/data-tables/bootstrap3/dataTables.bootstrap.js"></script>
+    <!--flaty scripts-->
+    <script src="js/flaty.js"></script>
+    <script src="js/flaty-demo-codes.js"></script>
+    <script type="text/javascript" src="assets/chosen-bootstrap/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-duallistbox/duallistbox/bootstrap-duallistbox.js"></script>
+    <script type="text/javascript" src="assets/dropzone/downloads/dropzone.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="assets/clockface/js/clockface.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-daterangepicker/date.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-switch/static/js/bootstrap-switch.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+    <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#openModalBtn').on('click', function () {
+                // $('#modalTitle').text('Create Task');
+                $('#myModal').modal('show');
+            });
+
+            $('.open-modal-btn-approve').on('click', function () {
+                $('#myModal1').modal('show');
+            });
+
+            $('.open-modal-btn-reject').on('click', function () {
+                $('#myModal2').modal('show');
+            });
+
+            $('#saveChangesBtn').on('click', function () {
+                alert('Your changes have been saved!');
+                $('#myModal').modal('hide');
+            });
+
+            $('#myModal').on('shown.bs.modal', function () {
+            });
+
+            $('#myModal').on('hidden.bs.modal', function () {
+            });
+        });
+    </script>
+</body>
+
+</html>
+<!--
+-----------------------------------------------------------------------------------------------------------
+Add Leave Modal
+-----------------------------------------------------------------------------------------------------------
+-->
+<!-- modal  -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="color: black;" id="modalTitle">Add Leave</h4>
+            </div>
+            <div>
+                <div class="col-md-12">
+                    <form class="mail-compose form-horizontal" action="#">
+                        <div class="col-sm-12">
+                            <label class="control-label">Id</label>
+                            <input type="text" placeholder="Name" class="form-control" value="Emp01" readonly>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Name</label>
+                            <input type="text" placeholder="Name" class="form-control" value="Abhishek Kumar" readonly>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Leave Type</label>
+                            <div class="controls">
+                                <select class="form-control" data-placeholder="Choose a Leave Type" tabindex="1">
+                                    <option value="">Leave Type</option>
+                                    <option value="leave_type_1">type 1</option>
+                                    <option value="leave_type_2">type 2</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <label class="control-label">From Date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                                <div class="col-sm-6">
+                                    <label class="control-label">To Date</label>
+                                    <input type="date" class="form-control">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label class="control-label">Leave Duration</label>
+                            <input type="number" placeholder="Enter Leave Duration ( in days )" class="form-control" >
+                        </div>
+
+                        <div class="col-sm-12" style="margin-top: 10px;">
+                            <textarea class="form-control wysihtml5" rows="6"><b>Write reason here ...</b></textarea>
+                        </div>
+
+                        <div class="col-sm-12" style="margin-top: 10px;">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-rocket"></i>
+                                Add</button>
+                            <a type="button" class="btn">Cancel</a>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
