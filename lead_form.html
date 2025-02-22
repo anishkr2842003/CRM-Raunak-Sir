@@ -1,0 +1,306 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dashboard - Lead From</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--base css styles-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!-- css styles-->
+    <link rel="stylesheet" href="css/flaty.css">
+    <link rel="stylesheet" href="css/flaty-responsive.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="assets/data-tables/bootstrap3/dataTables.bootstrap.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- BEGIN Navbar -->
+        <div id="" class="navbar">
+            <button type="button" class="navbar-toggle navbar-btn for-nav-horizontal collapsed" data-toggle="collapse" data-target="#nav-horizontal">
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class='navbar-brand ' href='index.htm'>
+                <small>
+                    <i class="fa fa-home"></i>
+                    Home
+                </small>
+            </a>
+
+            <!-- BEGIN Navbar Buttons -->
+            <ul class="nav flaty-nav pull-right">
+                <!-- BEGIN Button User -->
+                <li class="user-profile">
+                    <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+                        <img class="nav-user-photo" src="img/demo/avatar/avatar1.jpg" alt="Penny's Photo">
+                        <span id="user_info">
+                            Admin
+                        </span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <!-- BEGIN User Dropdown -->
+                    <ul class="dropdown-menu dropdown-navbar" id="user_menu">
+                        <li class="nav-header">
+                            <i class="fa fa-clock-o"></i>
+                            Logined From 20:45
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-cog"></i>
+                                Account Settings
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question"></i>
+                                Help
+                            </a>
+                        </li>
+
+                        <li class="divider visible-xs"></li>
+
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-tasks"></i>
+                                Tasks
+                                <span class="badge badge-warning">4</span>
+                            </a>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-bell"></i>
+                                Notifications
+                                <span class="badge badge-important">8</span>
+                            </a>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                Messages
+                                <span class="badge badge-success">5</span>
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="#">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- BEGIN User Dropdown -->
+                </li>
+                <!-- END Button User -->
+            </ul>
+            <ul class="nav flaty-nav navbar-collapse collapse" id="nav-horizontal">
+                <li class="notification_parent_div">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-desktop"></i>
+                        <span class="nav_text_all">Lead CRM</span>
+                        <span class="notification_nav">9+</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">CRM
+                                    Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href='lead_form.html'>Lead Form</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href='show_pl_od_leads.html'>PL & OD
+                                    Leads</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
+                                    Leads</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Login CRM</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">PL & OD
+                                    Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
+                                    Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">HRMS</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">PL & OD
+                                    Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
+                                    Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Tickect</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Open Ticket</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Close
+                                    Ticket</a>
+                            </div>
+
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Task</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Login Task</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Leads Task</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-file"></i>
+                        <span class="nav_text_all">Warning</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">PL & OD
+                                    Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
+                                    Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- END Horizontal Menu -->
+
+        </div>
+        <!-- BEGIN Container -->
+        <div class="container" id="main-container">
+            <!-- BEGIN Content -->
+            <div id="main-content">
+                <!-- BEGIN Page Title -->
+                <div class="page-title lead_page_title ">
+                    <div>
+
+                        <h3><i class="fa fa-file"></i> Lead From</h3>
+                    </div>
+                </div>
+                <!-- END Page Title -->
+
+                <!-- BEGIN Main Content -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-lg-12 controls">
+                                        <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
+                                            <option value="">Select Product</option>
+                                            <option value="Category 1">PL & OD Leads</option>
+                                            <option value="Category 2">Home Loans Leads</option>
+
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <div class="col-sm-12 col-lg-12 controls">
+                                        <div class="input-group">
+                                            <span class="input-group-addon">Mobile Number</span>
+                                            <input class="form-control" type="text" placeholder="9876543210">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-12" style="margin-top: 30px;display: flex;justify-content: center;">
+                                <button class="btn btn-info"><i class="fa fa-search"></i> Check Leads</button> &nbsp;
+                                <a href='add_all_leads.html'> <button class="btn  btn-success"> <i class="fa fa-plus"></i> Add Leads</button></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <div class="box">
+                            <p class="leads_list">If Leads are avilable then Show Here --- </p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Main Content -->
+            </div>
+            <!-- END Content -->
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>2024 © Admin Template.</p>
+        </footer>
+        <!-- Scroll Up Button -->
+        <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!--basic scripts-->
+    <script src="ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/jquery/jquery-2.1.1.min.js"><\/script>')</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/jquery-cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/data-tables/bootstrap3/dataTables.bootstrap.js"></script>
+    <!--flaty scripts-->
+    <script src="js/flaty.js"></script>
+    <script src="js/flaty-demo-codes.js"></script>
+
+</body>
+
+</html>
