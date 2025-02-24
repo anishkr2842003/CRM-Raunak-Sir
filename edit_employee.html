@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dashboard - Employee Profile Edit</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--base css styles-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!-- css styles-->
+    <link rel="stylesheet" href="css/flaty.css">
+    <link rel="stylesheet" href="css/flaty-responsive.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="assets/data-tables/bootstrap3/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/chosen-bootstrap/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/jquery-tags-input/jquery.tagsinput.css">
+    <link rel="stylesheet" type="text/css" href="assets/jquery-pwstrength/jquery.pwstrength.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-fileupload/bootstrap-fileupload.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-duallistbox/duallistbox/bootstrap-duallistbox.css">
+    <link rel="stylesheet" type="text/css" href="assets/dropzone/downloads/css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-colorpicker/css/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-timepicker/compiled/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/clockface/css/clockface.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datepicker/css/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-switch/static/stylesheets/bootstrap-switch.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css">
+
+    <style>
+        .hidden_tl,
+        .hidden_manager,
+        .hidden_agent,
+        .hidden_loginManager,
+        .hidden_excutive,
+        .hidden_hr {
+            display: none;
+        }
+
+        .step {
+            display: none;
+        }
+
+        .step.active {
+            display: block;
+        }
+
+        .step-indicator {
+            margin-bottom: 20px;
+        }
+
+        .step-indicator span {
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body style="background-color: #2d2d2d;">
+    <div class="wrapper">
+        <!-- BEGIN Navbar -->
+        <div id="" class="navbar">
+            <button type="button" class="navbar-toggle navbar-btn for-nav-horizontal collapsed" data-toggle="collapse"
+                data-target="#nav-horizontal">
+                <span class="fa fa-bars"></span>
+            </button>
+            <!-- BEGIN Navbar Buttons -->
+            <ul class="nav flaty-nav pull-right">
+                <!-- BEGIN Button User -->
+                <li class="user-profile">
+                    <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+                        <img class="nav-user-photo" src="img/demo/avatar/avatar1.jpg" alt="Penny's Photo">
+                        <span id="user_info"> Admin </span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <!-- BEGIN User Dropdown -->
+                    <ul class="dropdown-menu dropdown-navbar" id="user_menu">
+                        <li class="nav-header">
+                            <i class="fa fa-clock-o"></i>
+                            Logined From 20:45
+                        </li>
+                        <li>
+                            <a href='dashboard.html'>
+                                <i class="fa fa-cog"></i>
+                                Dashboard
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-cog"></i>
+                                Account Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question"></i>
+                                Help
+                            </a>
+                        </li>
+                        <li class="divider visible-xs"></li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-tasks"></i>
+                                Tasks
+                                <span class="badge badge-warning">4</span>
+                            </a>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-bell"></i>
+                                Notifications
+                                <span class="badge badge-important">8</span>
+                            </a>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                Messages
+                                <span class="badge badge-success">5</span>
+                            </a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="#"> Logout </a>
+                        </li>
+                    </ul>
+                    <!-- BEGIN User Dropdown -->
+                </li>
+                <!-- END Button User -->
+            </ul>
+            <ul class="nav flaty-nav navbar-collapse collapse" id="nav-horizontal">
+                <li class="notification_parent_div">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-home"></i>
+                        <span class="nav_text_all">Home</span>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='index.htm'>Updates</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='policy.html'>Policy</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li class="notification_parent_div">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-desktop"></i>
+                        <span class="nav_text_all">Lead CRM</span>
+                        <span class="notification_nav">9+</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">CRM Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='lead_form.html'>Create Lead</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='show_pl_od_leads.html'>PL & OD Leads</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='show_home_loans_leads.html'>Home Loan Leads</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='credit_card_leads.html'>Credit Card Leads</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Login CRM</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='pl_od_login.html'>PL & OD Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Home Loan Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a class='dropdown-toggle' href='task.html'>
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Task</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Tickect</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Open Ticket</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Close Ticket</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">HRMS</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='hrms_dashboard.html'>Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Interviews</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href='add_employee.html'>Add Employee</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Attendence</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Target</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-file"></i>
+                        <span class="nav_text_all">Warning</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">PL & OD Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="...">
+                                <a href="">Home Loan Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+            <!-- END Horizontal Menu -->
+        </div>
+        <!-- BEGIN Container -->
+        <div class="container" id="main-container">
+
+            <!-- BEGIN Content -->
+            <div id="main-content">
+                <!-- BEGIN Main Content -->
+                <!-- <div class="container">
+                    <div class="d-flex" style="justify-self: end;">
+                        <a href='finial_employees.html'>
+                            <button class="btn btn-info">
+                                All employee
+                            </button>
+                        </a>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <form id="form-container">
+                            <div class="step-indicator">
+                                <span>Step <span id="current-step">1</span> out of 4</span>
+                            </div>
+                            <!-- Step 1: Employee Details -->
+                            <div class="page-title lead_page_title ">
+                                <div style="display: flex; align-items: center; justify-content: center; gap: 10px;">
+                                    <img src="https://plus.unsplash.com/premium_photo-1689568126014-06fea9d5d341?fm=jpg&amp;q=60&amp;w=3000&amp;ixlib=rb-4.0.3&amp;ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvZmlsZXxlbnwwfHwwfHx8MA%3D%3D"
+                                        alt="" height="80px" width="80px"
+                                        style="object-fit: cover; border-radius: 50%;">
+                                    <h3 class="theam_color_text">Employee Name</h3>
+                                </div>
+                            </div>
+                            <div class="step active" id="step-1">
+                                <h2 class="text-primary">Employee Details</h2>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">New Photo</label>
+                                            <input type="file" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light"> Name</label>
+                                            <input type="text" class="form-control" value="Abhishek">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light"> Number</label>
+                                            <input type="number" class="form-control" value="911234567890">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Alternate Number</label>
+                                            <input type="number" class="form-control" value="911234567890">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Gender</label>
+                                            <div class="controls">
+                                                <select class="form-control">
+                                                    <option value="">Male</option>
+                                                    <option value="">Female</option>
+                                                    <option value="">Other</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Personal Email id</label>
+                                            <input type="email" class="form-control" value="abhishek@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Official Email id</label>
+                                            <input type="email" class="form-control" value="abhishek@gmail.com">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Pan number</label>
+                                            <input type="text" class="form-control" value="ABC12345j">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Adhar number</label>
+                                            <input type="number" class="form-control" value="123456789012">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">DOB</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Experience</label>
+                                            <input type="text" class="form-control" value="5">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Experience in years</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Qualification</label>
+                                            <div class="controls">
+                                                <select class="form-control">
+                                                    <option value="">10th</option>
+                                                    <option value="">12th</option>
+                                                    <option value="">Graduation</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12" style="padding: 0;">
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="control-label text-light">Permanent Address</label>
+                                                <textarea name="" class="form-control" id=""></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <div class="form-group">
+                                                <label class="control-label text-light">Current Address</label>
+                                                <textarea name="" class="form-control" id=""></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary next-step">Next</button>
+                            </div>
+
+                            <!-- Step 2: Team Details -->
+                            <div class="step" id="step-2">
+                                <h2 class="text-primary">Team Details</h2>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Select Department</label>
+                                            <div class="controls">
+                                                <select class="form-control" id="departmentSelect">
+                                                    <option value="">-- Select Department --</option>
+                                                    <option value="Sales">Sales</option>
+                                                    <option value="Login">Login</option>
+                                                    <option value="HR">HR</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" id="salesOptions">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Select Role</label>
+                                            <div class="controls">
+                                                <select class="form-control" id="salesRoleSelect">
+                                                    <option value="">-- Select Role --</option>
+                                                    <option value="Manager">Add Manager</option>
+                                                    <option value="TL">Add Team Leader</option>
+                                                    <option value="Agent">Add Agent</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" id="loginOptions">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Select Role</label>
+                                            <div class="controls">
+                                                <select class="form-control" id="loginRoleSelect">
+                                                    <option value="">-- Select Role --</option>
+                                                    <option value="Manager">Add Manager</option>
+                                                    <option value="Executive">Add Executive</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" id="teamOptions">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Select Team</label>
+                                            <div class="controls">
+                                                <select class="form-control" id="teamSelect">
+                                                    <option value="">-- Select Team --</option>
+                                                    <option value="TeamA">Team A</option>
+                                                    <option value="TeamB">Team B</option>
+                                                    <option value="TeamC">Team C</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" id="managerOptions">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Select Manager</label>
+                                            <div class="controls">
+                                                <select class="form-control" id="managerSelect">
+                                                    <option value="">-- Select Manager --</option>
+                                                    <option value="ManagerA">Manager A</option>
+                                                    <option value="ManagerB">Manager B</option>
+                                                    <option value="ManagerC">Manager C</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3" id="tlOptions">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Select Team Leader</label>
+                                            <div class="controls">
+                                                <select class="form-control" id="tlSelect">
+                                                    <option value="">-- Select Team Leader --</option>
+                                                    <option value="TLA">Team Leader A</option>
+                                                    <option value="TLB">Team Leader B</option>
+                                                    <option value="TLC">Team Leader C</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary prev-step">Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Next</button>
+                            </div>
+
+                            <!-- Step 3: Emergency Contact Details -->
+                            <div class="step" id="step-3">
+                                <h2 class="text-primary">Emergency Contact Details</h2>
+                                <div class="row">
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Number</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-4">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Relation</label>
+                                            <div class="controls">
+                                                <select class="form-control">
+                                                    <option value="">Father</option>
+                                                    <option value="">Mother</option>
+                                                    <option value="">Sister</option>
+                                                    <option value="">Brother</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="button" class="btn btn-primary prev-step">Previous</button>
+                                <button type="button" class="btn btn-primary next-step">Next</button>
+                            </div>
+
+                            <!-- Step 4: Joining Details -->
+                            <div class="step" id="step-4">
+                                <h2 class="text-primary">Joining Details</h2>
+                                <div class="row">
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Employee ID</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Date of Joining</label>
+                                            <input type="date" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Salary</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Monthly Salary Target</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Department</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Team</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Team Manager</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Designation</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Team Leader</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Salary Bank</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">Salary Account Number</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <label class="control-label text-light">IFSC Code</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-lg-3">
+                                        <div class="form-group">
+                                            <div class="form-check">
+                                                <label style="font-size: 20px; color: white" class="form-check-label"
+                                                    for="option1">
+                                                    CRM Access :
+                                                </label>
+                                                <input style="
+                            height: 15px;
+                            width: 15px;
+                            margin-left: 20px;
+                          " class="form-check-input" type="radio" name="action" id="option1">
+                                                <label style="font-size: 17px; color: white" class="form-check-label"
+                                                    for="option1">
+                                                    Yes
+                                                </label>
+                                                <input style="
+                            height: 15px;
+                            width: 15px;
+                            margin-left: 12px;
+                          " class="form-check-input" type="radio" name="action" id="option1">
+                                                <label style="font-size: 17px; color: white" class="form-check-label"
+                                                    for="option1">
+                                                    No
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div> -->
+                                </div>
+                                <button type="button" class="btn btn-primary prev-step">Previous</button>
+                                <button type="button" class="btn btn-success save-step">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- END Main Content -->
+            </div>
+            <!-- END Content -->
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>2024 © Admin Template.</p>
+        </footer>
+        <!-- Scroll Up Button -->
+        <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+    <!--basic scripts-->
+    <script src="ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+        window.jQuery ||
+            document.write(
+                '<script src="assets/jquery/jquery-2.1.1.min.js"><\/script>'
+            );
+    </script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/jquery-cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/data-tables/bootstrap3/dataTables.bootstrap.js"></script>
+    <!--flaty scripts-->
+    <script src="js/flaty.js"></script>
+    <script src="js/flaty-demo-codes.js"></script>
+    <script type="text/javascript" src="assets/chosen-bootstrap/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-duallistbox/duallistbox/bootstrap-duallistbox.js"></script>
+    <script type="text/javascript" src="assets/dropzone/downloads/dropzone.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="assets/clockface/js/clockface.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-daterangepicker/date.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-switch/static/js/bootstrap-switch.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+    <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
+
+    <!-- Multi-step form script -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const steps = document.querySelectorAll(".step");
+            const prevButtons = document.querySelectorAll(".prev-step");
+            const nextButtons = document.querySelectorAll(".next-step");
+            const saveButton = document.querySelector(".save-step");
+            const currentStepIndicator = document.getElementById("current-step");
+            let currentStep = 0;
+
+            function showStep(stepIndex) {
+                steps.forEach((step, index) => {
+                    step.classList.toggle("active", index === stepIndex);
+                });
+                currentStepIndicator.textContent = stepIndex + 1;
+            }
+
+            prevButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    if (currentStep > 0) {
+                        currentStep--;
+                        showStep(currentStep);
+                    }
+                });
+            });
+
+            nextButtons.forEach(button => {
+                button.addEventListener("click", function () {
+                    if (currentStep < steps.length - 1) {
+                        currentStep++;
+                        showStep(currentStep);
+                    }
+                });
+            });
+
+            saveButton.addEventListener("click", function () {
+                // Handle form submission or final step logic here
+                alert("Form submitted!");
+            });
+
+            // Initialize the first step
+            showStep(currentStep);
+
+            // Department selection logic
+            const departmentSelect = document.getElementById("departmentSelect");
+            const salesRoleSelect = document.getElementById("salesRoleSelect");
+            const loginRoleSelect = document.getElementById("loginRoleSelect");
+            const teamSelect = document.getElementById("teamSelect");
+            const managerSelect = document.getElementById("managerSelect");
+            const tlSelect = document.getElementById("tlSelect");
+
+            departmentSelect.addEventListener("change", function () {
+                const selectedDepartment = departmentSelect.value;
+                document.getElementById("salesOptions").style.display = "none";
+                document.getElementById("loginOptions").style.display = "none";
+                document.getElementById("teamOptions").style.display = "none";
+                document.getElementById("managerOptions").style.display = "none";
+                document.getElementById("tlOptions").style.display = "none";
+
+                if (selectedDepartment === "Sales") {
+                    document.getElementById("salesOptions").style.display = "block";
+                } else if (selectedDepartment === "Login") {
+                    document.getElementById("loginOptions").style.display = "block";
+                } else if (selectedDepartment === "HR") {
+                    // No additional options for HR
+                }
+            });
+
+            salesRoleSelect.addEventListener("change", function () {
+                const selectedRole = salesRoleSelect.value;
+                document.getElementById("teamOptions").style.display = "none";
+                document.getElementById("managerOptions").style.display = "none";
+                document.getElementById("tlOptions").style.display = "none";
+
+                if (selectedRole === "Manager") {
+                    document.getElementById("teamOptions").style.display = "block";
+                } else if (selectedRole === "TL") {
+                    document.getElementById("teamOptions").style.display = "block";
+                    document.getElementById("managerOptions").style.display = "block";
+                } else if (selectedRole === "Agent") {
+                    document.getElementById("teamOptions").style.display = "block";
+                    document.getElementById("managerOptions").style.display = "block";
+                    document.getElementById("tlOptions").style.display = "block";
+                }
+            });
+
+            loginRoleSelect.addEventListener("change", function () {
+                const selectedRole = loginRoleSelect.value;
+                document.getElementById("managerOptions").style.display = "none";
+
+                if (selectedRole === "Executive") {
+                    document.getElementById("managerOptions").style.display = "block";
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
