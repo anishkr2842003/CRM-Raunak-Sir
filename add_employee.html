@@ -272,1722 +272,1736 @@
     </div>
     <!-- BEGIN Container -->
     <div class="container" id="main-container">
-      <a href='all_employees.html'>
-        <button class="btn btn-success" style="
-              margin-top: 20px;
-              float: right;
-              padding: 8px;
-              font-weight: bold;
-              font-size: 22px;
-            ">
-          All employee
-        </button>
-      </a>
+
       <!-- BEGIN Content -->
       <div id="main-content">
         <!-- BEGIN Main Content -->
+        <div class="container">
+          <div class="d-flex" style="justify-self: end;">
+            <a href='finial_employees.html'>
+              <button class="btn btn-info">
+                All employee
+              </button>
+            </a>
+          </div>
+        </div>
         <div class="row">
           <div class="col-md-12">
             <form id="form-container">
               <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <label class="control-label text-light">Select Department</label>
-                    <div class="controls">
-                      <select class="form-control" id="departmentSelect" data-placeholder="Choose a Category"
-                        tabindex="1">
-                        <option value="">-- Choose Department --</option>
-                        <option value="Sales">Sales Department</option>
-                        <option value="Login">Login Department</option>
-                        <option value="HR">HR Department</option>
-                      </select>
+
+                <!-- Employee Details -->
+                <div class="col-lg-12">
+                  <h2 class="text-primary">Employee Details</h2>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light"> Name</label>
+                      <input type="text" class="form-control">
                     </div>
                   </div>
-                </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light"> Number</label>
+                      <input type="number" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">Alternate Number</label>
+                      <input type="number" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">Gender</label>
+                      <div class="controls">
+                        <select class="form-control">
+                          <option value="">MAle</option>
+                          <option value="">Female</option>
+                          <option value="">other</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">Personal Email id</label>
+                      <input type="email" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">Official Email id</label>
+                      <input type="email" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">Pan number</label>
+                      <input type="number" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">Adhar number</label>
+                      <input type="number" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">dob</label>
+                      <input type="date" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">EXPERINCE</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
 
-                <!-- sales department -->
-                <div class="col-md-6">
-                  <div id="salesOptions" style="display: none; margin-top: 20px">
-                    <div style="display: flex">
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">EXPERINCE in years</label>
+                      <input type="text" class="form-control">
+                    </div>
+                  </div>
+
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">Qualifiaction</label>
+                      <div class="controls">
+                        <select class="form-control">
+                          <option value="">10th</option>
+                          <option value="">12th</option>
+                          <option value="">graduation</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-lg-3">
+                    <div class="form-group">
+                      <label class="control-label text-light">Photo</label>
+                      <input type="file" class="form-control">
+                    </div>
+                  </div>
+                  <div class="col-lg-12">
+                    <div class="col-lg-6">
                       <div class="form-group">
-                        <div class="form-check">
-                          <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
-                            id="option1">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
-                            Add Manager
-                          </label>
-                        </div>
-                      </div>
-                      <div class="form-group" style="margin-left: 20px">
-                        <div class="form-check">
-                          <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
-                            id="option2">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option2">
-                            Add TL
-                          </label>
-                        </div>
-                      </div>
-                      <div class="form-group" style="margin-left: 20px">
-                        <div class="form-check">
-                          <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
-                            id="option3">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option3">
-                            Add Agent
-                          </label>
-                        </div>
+                        <label class="control-label text-light">PERMANENT Address</label>
+                        <textarea name="" class="form-control" id=""></textarea>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                <!-- login department -->
-                <div class="col-md-6">
-                  <div id="loginOptions" style="display: none; margin-top: 20px">
-                    <div style="display: flex">
+                    <div class="col-lg-6">
                       <div class="form-group">
-                        <div class="form-check">
-                          <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
-                            id="option1login">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option1login">
-                            Manager
-                          </label>
-                        </div>
+                        <label class="control-label text-light">Current Address</label>
+                        <textarea name="" class="form-control" id=""></textarea>
                       </div>
-                      <div class="form-group" style="margin-left: 20px">
-                        <div class="form-check">
-                          <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
-                            id="option2login">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option2login">
-                            Excutive
-                          </label>
+                    </div>
+                  </div>
+
+
+                </div>
+
+
+                <!-- sales add manager form -->
+                <div class="col-lg-12">
+                  <h2 class="text-primary">Employee Details</h2>
+                  <!-- Select Department -->
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="control-label text-light">Select Department</label>
+                      <div class="controls">
+                        <select class="form-control" id="departmentSelect" data-placeholder="Choose a Category"
+                          tabindex="1">
+                          <option value="">-- Choose Department --</option>
+                          <option value="Sales">Sales Department</option>
+                          <option value="Login">Login Department</option>
+                          <option value="HR">HR Department</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- sales department -->
+                  <div class="col-md-6">
+                    <div id="salesOptions" style="display: none; margin-top: 20px">
+                      <div style="display: flex">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
+                              id="option1">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
+                              Add Manager
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group" style="margin-left: 20px">
+                          <div class="form-check">
+                            <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
+                              id="option2">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option2">
+                              Add TL
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group" style="margin-left: 20px">
+                          <div class="form-check">
+                            <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
+                              id="option3">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option3">
+                              Add Agent
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
+
+                  <!-- login department -->
+                  <div class="col-md-6">
+                    <div id="loginOptions" style="display: none; margin-top: 20px">
+                      <div style="display: flex">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
+                              id="option1login">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option1login">
+                              Manager
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form-group" style="margin-left: 20px">
+                          <div class="form-check">
+                            <input style="height: 20px; width: 20px" class="form-check-input" type="radio" name="action"
+                              id="option2login">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option2login">
+                              Excutive
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- hr department -->
+                  <div class="col-md-6">
+                    <div id="hrOptions" style="display: none;">
+                      <div style="display: flex">
+                        <div class="form-group">
+                          <label class="control-label text-light"> Name</label>
+                          <input type="text" value="Ravi" size="75" readonly="" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="form-section_manager" class="hidden_manager">
+                    <div class="row">
+                      <!-- <div class="col-lg-12"> -->
+
+                      <div class="col-md-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Select Team</label>
+                          <div class="controls">
+                            <select class="form-control">
+                              <option value="">-- Select Team --</option>
+                              <option value="">Team A</option>
+                              <option value="">Team B</option>
+                              <option value="">Team C</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+
+                    </div>
+                    <!-- Emergency Contact Details -->
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Emergency Contact Details</h2>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">RELATION</label>
+                          <div class="controls">
+                            <select class="form-control">
+                              <option value="">Father</option>
+                              <option value="">Mother</option>
+                              <option value="">Sister</option>
+                              <option value="">Brother</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Joining Details -->
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Joining Details</h2>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Employee ID</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Date of joining</label>
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Monthly Salary Target</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Department</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team manager</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Designation</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team leader</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">salary bank</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary account number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">IFSC Code</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
+                              CRM Access :
+                            </label>
+                            <input style="
+                                height: 15px;
+                                width: 15px;
+                                margin-left: 20px;
+                              " class="form-check-input" type="radio" name="action" id="option1">
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              Yes
+                            </label>
+                            <input style="
+                                height: 15px;
+                                width: 15px;
+                                margin-left: 12px;
+                              " class="form-check-input" type="radio" name="action" id="option1">
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              No
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Save Button Details -->
+                    <button class="btn btn-success" style="
+                        width: 8%;
+                        float: right;
+                        padding: 8px;
+                        font-weight: bold;
+                        font-size: 22px;
+                      ">
+                      Save
+                    </button>
+                  </div>
                 </div>
 
-                <!-- hr department -->
-                <div class="col-md-6">
-                  <div id="hrOptions" style="display: none;">
-                    <div style="display: flex">
+                <!-- sales add tl form -->
+                <div id="form-section_tl" class="hidden_tl">
+                  <div class="row">
+                    <!-- <div class="col-lg-12"> -->
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Select Team</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">-- Select Team --</option>
+                            <option value="">Team A</option>
+                            <option value="">Team B</option>
+                            <option value="">Team C</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Select manager</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">-- Select Manager --</option>
+                            <option value="">Manager A</option>
+                            <option value="">manager B</option>
+                            <option value="">manager C</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
                       <div class="form-group">
                         <label class="control-label text-light"> Name</label>
-                        <input type="text" value="Ravi" size="75" readonly="" class="form-control">
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-
-              <!-- sales add manager form -->
-              <div id="form-section_manager" class="hidden_manager">
-                <div class="row">
-                  <!-- <div class="col-lg-12"> -->
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Select Team</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">-- Select Team --</option>
-                          <option value="">Team A</option>
-                          <option value="">Team B</option>
-                          <option value="">Team C</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Name</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Alternate Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Gender</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">MAle</option>
-                          <option value="">Female</option>
-                          <option value="">other</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Personal Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Official Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Pan number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Adhar number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">dob</label>
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE in years</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Qualifiaction</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">10th</option>
-                          <option value="">12th</option>
-                          <option value="">graduation</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Photo</label>
-                      <input type="file" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="control-label text-light">PERMANENT Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="control-label text-light">Current Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Emergency Contact Details</h2>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Name</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Number</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light"> Number</label>
+                        <input type="number" class="form-control">
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">RELATION</label>
+                        <label class="control-label text-light">Alternate Number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Gender</label>
                         <div class="controls">
                           <select class="form-control">
-                            <option value="">Father</option>
-                            <option value="">Mother</option>
-                            <option value="">Sister</option>
-                            <option value="">Brother</option>
+                            <option value="">MAle</option>
+                            <option value="">Female</option>
+                            <option value="">other</option>
                           </select>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Joining Details</h2>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Employee ID</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light">Personal Email id</label>
+                        <input type="email" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Date of joining</label>
+                        <label class="control-label text-light">Official Email id</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Pan number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Adhar number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">dob</label>
                         <input type="date" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Monthly Salary Target</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Department</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team manager</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Designation</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team leader</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">salary bank</label>
+                        <label class="control-label text-light">EXPERINCE</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary account number</label>
+                        <label class="control-label text-light">EXPERINCE in years</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">IFSC Code</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light">Qualifiaction</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">10th</option>
+                            <option value="">12th</option>
+                            <option value="">graduation</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <div class="form-check">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
-                            CRM Access :
-                          </label>
-                          <input style="
+                        <label class="control-label text-light">Photo</label>
+                        <input type="file" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">PERMANENT Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">Current Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Emergency Contact Details</h2>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">RELATION</label>
+                          <div class="controls">
+                            <select class="form-control">
+                              <option value="">Father</option>
+                              <option value="">Mother</option>
+                              <option value="">Sister</option>
+                              <option value="">Brother</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Joining Details</h2>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Employee ID</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Date of joining</label>
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Monthly Salary Target</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Department</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team manager</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Designation</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team leader</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">salary bank</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary account number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">IFSC Code</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
+                              CRM Access :
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 20px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            Yes
-                          </label>
-                          <input style="
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              Yes
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 12px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            No
-                          </label>
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              No
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <button class="btn btn-success" style="
+                    <button class="btn btn-success" style="
                         width: 8%;
                         float: right;
                         padding: 8px;
                         font-weight: bold;
                         font-size: 22px;
                       ">
-                    Save
-                  </button>
+                      Save
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              <!-- sales add tl form -->
-              <div id="form-section_tl" class="hidden_tl">
-                <div class="row">
-                  <!-- <div class="col-lg-12"> -->
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Select Team</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">-- Select Team --</option>
-                          <option value="">Team A</option>
-                          <option value="">Team B</option>
-                          <option value="">Team C</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Select manager</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">-- Select Manager --</option>
-                          <option value="">Manager A</option>
-                          <option value="">manager B</option>
-                          <option value="">manager C</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Name</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Alternate Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Gender</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">MAle</option>
-                          <option value="">Female</option>
-                          <option value="">other</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Personal Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Official Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Pan number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Adhar number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">dob</label>
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE in years</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Qualifiaction</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">10th</option>
-                          <option value="">12th</option>
-                          <option value="">graduation</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Photo</label>
-                      <input type="file" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="col-lg-6">
+                <!-- sales add agent form -->
+                <div id="form-section_agent" class="hidden_agent">
+                  <div class="row">
+                    <!-- <div class="col-lg-12"> -->
+                    <div class="col-md-3">
                       <div class="form-group">
-                        <label class="control-label text-light">PERMANENT Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="control-label text-light">Current Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Emergency Contact Details</h2>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Name</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Number</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">RELATION</label>
+                        <label class="control-label text-light">Select Team</label>
                         <div class="controls">
                           <select class="form-control">
-                            <option value="">Father</option>
-                            <option value="">Mother</option>
-                            <option value="">Sister</option>
-                            <option value="">Brother</option>
+                            <option value="">-- Select Team --</option>
+                            <option value="">Team A</option>
+                            <option value="">Team B</option>
+                            <option value="">Team C</option>
                           </select>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Joining Details</h2>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Select manager</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">-- Select Manager --</option>
+                            <option value="">Manager A</option>
+                            <option value="">manager B</option>
+                            <option value="">manager C</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Select tl</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">-- Select tl --</option>
+                            <option value="">tl A</option>
+                            <option value="">tl B</option>
+                            <option value="">tl C</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Employee ID</label>
+                        <label class="control-label text-light"> Name</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Date of joining</label>
+                        <label class="control-label text-light"> Number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Alternate Number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Gender</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">MAle</option>
+                            <option value="">Female</option>
+                            <option value="">other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Personal Email id</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Official Email id</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Pan number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Adhar number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">dob</label>
                         <input type="date" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Monthly Salary Target</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Department</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team manager</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Designation</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team leader</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">salary bank</label>
+                        <label class="control-label text-light">EXPERINCE</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary account number</label>
+                        <label class="control-label text-light">EXPERINCE in years</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">IFSC Code</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light">Qualifiaction</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">10th</option>
+                            <option value="">12th</option>
+                            <option value="">graduation</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <div class="form-check">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
-                            CRM Access :
-                          </label>
-                          <input style="
+                        <label class="control-label text-light">Photo</label>
+                        <input type="file" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">PERMANENT Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">Current Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Emergency Contact Details</h2>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">RELATION</label>
+                          <div class="controls">
+                            <select class="form-control">
+                              <option value="">Father</option>
+                              <option value="">Mother</option>
+                              <option value="">Sister</option>
+                              <option value="">Brother</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Joining Details</h2>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Employee ID</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Date of joining</label>
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Monthly Salary Target</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Department</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team manager</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Designation</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team leader</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">salary bank</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary account number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">IFSC Code</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
+                              CRM Access :
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 20px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            Yes
-                          </label>
-                          <input style="
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              Yes
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 12px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            No
-                          </label>
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              No
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <button class="btn btn-success" style="
+                    <button class="btn btn-success" style="
                         width: 8%;
                         float: right;
                         padding: 8px;
                         font-weight: bold;
                         font-size: 22px;
                       ">
-                    Save
-                  </button>
+                      Save
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              <!-- sales add agent form -->
-              <div id="form-section_agent" class="hidden_agent">
-                <div class="row">
-                  <!-- <div class="col-lg-12"> -->
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Select Team</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">-- Select Team --</option>
-                          <option value="">Team A</option>
-                          <option value="">Team B</option>
-                          <option value="">Team C</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Select manager</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">-- Select Manager --</option>
-                          <option value="">Manager A</option>
-                          <option value="">manager B</option>
-                          <option value="">manager C</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Select tl</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">-- Select tl --</option>
-                          <option value="">tl A</option>
-                          <option value="">tl B</option>
-                          <option value="">tl C</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Name</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Alternate Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Gender</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">MAle</option>
-                          <option value="">Female</option>
-                          <option value="">other</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Personal Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Official Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Pan number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Adhar number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">dob</label>
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE in years</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Qualifiaction</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">10th</option>
-                          <option value="">12th</option>
-                          <option value="">graduation</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Photo</label>
-                      <input type="file" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="col-lg-6">
+                <!-- Login manager form -->
+                <div id="form-section_loginManager" class="hidden_loginManager">
+                  <div class="row">
+                    <!-- <div class="col-lg-12"> -->
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">PERMANENT Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="control-label text-light">Current Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Emergency Contact Details</h2>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Name</label>
+                        <label class="control-label text-light"> Name</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Number</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light"> Number</label>
+                        <input type="number" class="form-control">
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">RELATION</label>
+                        <label class="control-label text-light">Alternate Number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Gender</label>
                         <div class="controls">
                           <select class="form-control">
-                            <option value="">Father</option>
-                            <option value="">Mother</option>
-                            <option value="">Sister</option>
-                            <option value="">Brother</option>
+                            <option value="">MAle</option>
+                            <option value="">Female</option>
+                            <option value="">other</option>
                           </select>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Joining Details</h2>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Employee ID</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light">Personal Email id</label>
+                        <input type="email" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Date of joining</label>
+                        <label class="control-label text-light">Official Email id</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Pan number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Adhar number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">dob</label>
                         <input type="date" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Monthly Salary Target</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Department</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team manager</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Designation</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team leader</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">salary bank</label>
+                        <label class="control-label text-light">EXPERINCE</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary account number</label>
+                        <label class="control-label text-light">EXPERINCE in years</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">IFSC Code</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light">Qualifiaction</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">10th</option>
+                            <option value="">12th</option>
+                            <option value="">graduation</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <div class="form-check">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
-                            CRM Access :
-                          </label>
-                          <input style="
+                        <label class="control-label text-light">Photo</label>
+                        <input type="file" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">PERMANENT Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">Current Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Emergency Contact Details</h2>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">RELATION</label>
+                          <div class="controls">
+                            <select class="form-control">
+                              <option value="">Father</option>
+                              <option value="">Mother</option>
+                              <option value="">Sister</option>
+                              <option value="">Brother</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Joining Details</h2>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Employee ID</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Date of joining</label>
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Monthly Salary Target</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Department</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team manager</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Designation</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team leader</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">salary bank</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary account number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">IFSC Code</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
+                              CRM Access :
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 20px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            Yes
-                          </label>
-                          <input style="
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              Yes
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 12px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            No
-                          </label>
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              No
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <button class="btn btn-success" style="
+                    <button class="btn btn-success" style="
                         width: 8%;
                         float: right;
                         padding: 8px;
                         font-weight: bold;
                         font-size: 22px;
                       ">
-                    Save
-                  </button>
+                      Save
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Login manager form -->
-              <div id="form-section_loginManager" class="hidden_loginManager">
-                <div class="row">
-                  <!-- <div class="col-lg-12"> -->
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Name</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Alternate Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Gender</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">MAle</option>
-                          <option value="">Female</option>
-                          <option value="">other</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Personal Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Official Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Pan number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Adhar number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">dob</label>
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE in years</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Qualifiaction</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">10th</option>
-                          <option value="">12th</option>
-                          <option value="">graduation</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Photo</label>
-                      <input type="file" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="col-lg-6">
+                <!-- Login excutive form -->
+                <div id="form-section_excutive" class="hidden_excutive">
+                  <div class="row">
+                    <!-- <div class="col-lg-12"> -->
+                    <div class="col-md-3">
                       <div class="form-group">
-                        <label class="control-label text-light">PERMANENT Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="control-label text-light">Current Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Emergency Contact Details</h2>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Name</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Number</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">RELATION</label>
+                        <label class="control-label text-light">Select manager</label>
                         <div class="controls">
                           <select class="form-control">
-                            <option value="">Father</option>
-                            <option value="">Mother</option>
-                            <option value="">Sister</option>
-                            <option value="">Brother</option>
+                            <option value="">-- Select Manager --</option>
+                            <option value="">Manager A</option>
+                            <option value="">manager B</option>
+                            <option value="">manager C</option>
                           </select>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Joining Details</h2>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Employee ID</label>
+                        <label class="control-label text-light"> Name</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Date of joining</label>
+                        <label class="control-label text-light"> Number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Alternate Number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Gender</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">MAle</option>
+                            <option value="">Female</option>
+                            <option value="">other</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Personal Email id</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Official Email id</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Pan number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Adhar number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">dob</label>
                         <input type="date" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Monthly Salary Target</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Department</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team manager</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Designation</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team leader</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">salary bank</label>
+                        <label class="control-label text-light">EXPERINCE</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary account number</label>
+                        <label class="control-label text-light">EXPERINCE in years</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">IFSC Code</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light">Qualifiaction</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">10th</option>
+                            <option value="">12th</option>
+                            <option value="">graduation</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <div class="form-check">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
-                            CRM Access :
-                          </label>
-                          <input style="
+                        <label class="control-label text-light">Photo</label>
+                        <input type="file" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">PERMANENT Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">Current Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Emergency Contact Details</h2>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">RELATION</label>
+                          <div class="controls">
+                            <select class="form-control">
+                              <option value="">Father</option>
+                              <option value="">Mother</option>
+                              <option value="">Sister</option>
+                              <option value="">Brother</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Joining Details</h2>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Employee ID</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Date of joining</label>
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Monthly Salary Target</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Department</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team manager</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Designation</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team leader</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">salary bank</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary account number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">IFSC Code</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
+                              CRM Access :
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 20px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            Yes
-                          </label>
-                          <input style="
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              Yes
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 12px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            No
-                          </label>
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              No
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <button class="btn btn-success" style="
+                    <button class="btn btn-success" style="
                         width: 8%;
                         float: right;
                         padding: 8px;
                         font-weight: bold;
                         font-size: 22px;
                       ">
-                    Save
-                  </button>
+                      Save
+                    </button>
+                  </div>
                 </div>
-              </div>
 
-              <!-- Login excutive form -->
-              <div id="form-section_excutive" class="hidden_excutive">
-                <div class="row">
-                  <!-- <div class="col-lg-12"> -->
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Select manager</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">-- Select Manager --</option>
-                          <option value="">Manager A</option>
-                          <option value="">manager B</option>
-                          <option value="">manager C</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Name</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Alternate Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Gender</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">MAle</option>
-                          <option value="">Female</option>
-                          <option value="">other</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Personal Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Official Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Pan number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Adhar number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">dob</label>
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE in years</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Qualifiaction</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">10th</option>
-                          <option value="">12th</option>
-                          <option value="">graduation</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Photo</label>
-                      <input type="file" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="col-lg-6">
+                <!-- hr form form -->
+                <div id="form-section_hr" class="hidden_hr">
+                  <div class="row">
+                    <!-- <div class="col-lg-12"> -->
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">PERMANENT Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="control-label text-light">Current Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Emergency Contact Details</h2>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Name</label>
+                        <label class="control-label text-light"> Name</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Number</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light"> Number</label>
+                        <input type="number" class="form-control">
                       </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">RELATION</label>
+                        <label class="control-label text-light">Alternate Number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Gender</label>
                         <div class="controls">
                           <select class="form-control">
-                            <option value="">Father</option>
-                            <option value="">Mother</option>
-                            <option value="">Sister</option>
-                            <option value="">Brother</option>
+                            <option value="">MAle</option>
+                            <option value="">Female</option>
+                            <option value="">other</option>
                           </select>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Joining Details</h2>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Employee ID</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light">Personal Email id</label>
+                        <input type="email" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Date of joining</label>
+                        <label class="control-label text-light">Official Email id</label>
+                        <input type="email" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Pan number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">Adhar number</label>
+                        <input type="number" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-3">
+                      <div class="form-group">
+                        <label class="control-label text-light">dob</label>
                         <input type="date" class="form-control">
                       </div>
                     </div>
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Monthly Salary Target</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Department</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team manager</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Designation</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team leader</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">salary bank</label>
+                        <label class="control-label text-light">EXPERINCE</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">Salary account number</label>
+                        <label class="control-label text-light">EXPERINCE in years</label>
                         <input type="text" class="form-control">
                       </div>
                     </div>
 
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <label class="control-label text-light">IFSC Code</label>
-                        <input type="text" class="form-control">
+                        <label class="control-label text-light">Qualifiaction</label>
+                        <div class="controls">
+                          <select class="form-control">
+                            <option value="">10th</option>
+                            <option value="">12th</option>
+                            <option value="">graduation</option>
+                          </select>
+                        </div>
                       </div>
                     </div>
-
                     <div class="col-lg-3">
                       <div class="form-group">
-                        <div class="form-check">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
-                            CRM Access :
-                          </label>
-                          <input style="
+                        <label class="control-label text-light">Photo</label>
+                        <input type="file" class="form-control">
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">PERMANENT Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="form-group">
+                          <label class="control-label text-light">Current Address</label>
+                          <textarea name="" class="form-control" id=""></textarea>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Emergency Contact Details</h2>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Name</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">Number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-4">
+                        <div class="form-group">
+                          <label class="control-label text-light">RELATION</label>
+                          <div class="controls">
+                            <select class="form-control">
+                              <option value="">Father</option>
+                              <option value="">Mother</option>
+                              <option value="">Sister</option>
+                              <option value="">Brother</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-lg-12">
+                      <h2 class="text-primary">Joining Details</h2>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Employee ID</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Date of joining</label>
+                          <input type="date" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Monthly Salary Target</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Department</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team manager</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Designation</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">team leader</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">salary bank</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">Salary account number</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <label class="control-label text-light">IFSC Code</label>
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+
+                      <div class="col-lg-3">
+                        <div class="form-group">
+                          <div class="form-check">
+                            <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
+                              CRM Access :
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 20px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            Yes
-                          </label>
-                          <input style="
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              Yes
+                            </label>
+                            <input style="
                                 height: 15px;
                                 width: 15px;
                                 margin-left: 12px;
                               " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            No
-                          </label>
+                            <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
+                              No
+                            </label>
+                          </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <button class="btn btn-success" style="
+                    <button class="btn btn-success" style="
                         width: 8%;
                         float: right;
                         padding: 8px;
                         font-weight: bold;
                         font-size: 22px;
                       ">
-                    Save
-                  </button>
+                      Save
+                    </button>
+                  </div>
                 </div>
-              </div>
-
-              <!-- hr form form -->
-              <div id="form-section_hr" class="hidden_hr">
-                <div class="row">
-                  <!-- <div class="col-lg-12"> -->
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Name</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light"> Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Alternate Number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Gender</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">MAle</option>
-                          <option value="">Female</option>
-                          <option value="">other</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Personal Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Official Email id</label>
-                      <input type="email" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Pan number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Adhar number</label>
-                      <input type="number" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">dob</label>
-                      <input type="date" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">EXPERINCE in years</label>
-                      <input type="text" class="form-control">
-                    </div>
-                  </div>
-
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Qualifiaction</label>
-                      <div class="controls">
-                        <select class="form-control">
-                          <option value="">10th</option>
-                          <option value="">12th</option>
-                          <option value="">graduation</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="control-label text-light">Photo</label>
-                      <input type="file" class="form-control">
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="control-label text-light">PERMANENT Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                    <div class="col-lg-6">
-                      <div class="form-group">
-                        <label class="control-label text-light">Current Address</label>
-                        <textarea name="" class="form-control" id=""></textarea>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Emergency Contact Details</h2>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Name</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">Number</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-4">
-                      <div class="form-group">
-                        <label class="control-label text-light">RELATION</label>
-                        <div class="controls">
-                          <select class="form-control">
-                            <option value="">Father</option>
-                            <option value="">Mother</option>
-                            <option value="">Sister</option>
-                            <option value="">Brother</option>
-                          </select>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-lg-12">
-                    <h2 class="text-primary">Joining Details</h2>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Employee ID</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Date of joining</label>
-                        <input type="date" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Salary</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Monthly Salary Target</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Department</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team manager</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Designation</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">team leader</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">salary bank</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">Salary account number</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <label class="control-label text-light">IFSC Code</label>
-                        <input type="text" class="form-control">
-                      </div>
-                    </div>
-
-                    <div class="col-lg-3">
-                      <div class="form-group">
-                        <div class="form-check">
-                          <label style="font-size: 20px; color: white" class="form-check-label" for="option1">
-                            CRM Access :
-                          </label>
-                          <input style="
-                                height: 15px;
-                                width: 15px;
-                                margin-left: 20px;
-                              " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            Yes
-                          </label>
-                          <input style="
-                                height: 15px;
-                                width: 15px;
-                                margin-left: 12px;
-                              " class="form-check-input" type="radio" name="action" id="option1">
-                          <label style="font-size: 17px; color: white" class="form-check-label" for="option1">
-                            No
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <button class="btn btn-success" style="
-                        width: 8%;
-                        float: right;
-                        padding: 8px;
-                        font-weight: bold;
-                        font-size: 22px;
-                      ">
-                    Save
-                  </button>
-                </div>
-              </div>
             </form>
           </div>
         </div>
