@@ -1,0 +1,829 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Dashboard - Expense</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--base css styles-->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/font-awesome/css/font-awesome.min.css">
+    <!-- css styles-->
+    <link rel="stylesheet" href="css/flaty.css">
+    <link rel="stylesheet" href="css/flaty-responsive.css">
+    <link rel="shortcut icon" href="img/favicon.png">
+    <link rel="stylesheet" href="assets/data-tables/bootstrap3/dataTables.bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="assets/chosen-bootstrap/chosen.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/jquery-tags-input/jquery.tagsinput.css">
+    <link rel="stylesheet" type="text/css" href="assets/jquery-pwstrength/jquery.pwstrength.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-fileupload/bootstrap-fileupload.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-duallistbox/duallistbox/bootstrap-duallistbox.css">
+    <link rel="stylesheet" type="text/css" href="assets/dropzone/downloads/css/dropzone.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-colorpicker/css/colorpicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-timepicker/compiled/timepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/clockface/css/clockface.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-datepicker/css/datepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-daterangepicker/daterangepicker.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-switch/static/stylesheets/bootstrap-switch.css">
+    <link rel="stylesheet" type="text/css" href="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.css">
+
+    <style>
+        .table-flag-blue td {
+            font-weight: 300;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- BEGIN Navbar -->
+        <div id="" class="navbar">
+            <button type="button" class="navbar-toggle navbar-btn for-nav-horizontal collapsed" data-toggle="collapse"
+                data-target="#nav-horizontal">
+                <span class="fa fa-bars"></span>
+            </button>
+            <a class='navbar-brand ' href='index.htm'>
+                <small>
+                    <i class="fa fa-home"></i>
+                    Home
+                </small>
+            </a>
+
+            <!-- BEGIN Navbar Buttons -->
+            <ul class="nav flaty-nav pull-right">
+                <!-- BEGIN Button User -->
+                <li class="user-profile">
+                    <a data-toggle="dropdown" href="#" class="user-menu dropdown-toggle">
+                        <img class="nav-user-photo" src="img/demo/avatar/avatar1.jpg" alt="Penny's Photo">
+                        <span id="user_info">
+                            Admin
+                        </span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <!-- BEGIN User Dropdown -->
+                    <ul class="dropdown-menu dropdown-navbar" id="user_menu">
+                        <li class="nav-header">
+                            <i class="fa fa-clock-o"></i>
+                            Logined From 20:45
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-cog"></i>
+                                Account Settings
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-user"></i>
+                                Edit Profile
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-question"></i>
+                                Help
+                            </a>
+                        </li>
+
+                        <li class="divider visible-xs"></li>
+
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-tasks"></i>
+                                Tasks
+                                <span class="badge badge-warning">4</span>
+                            </a>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-bell"></i>
+                                Notifications
+                                <span class="badge badge-important">8</span>
+                            </a>
+                        </li>
+                        <li class="visible-xs">
+                            <a href="#">
+                                <i class="fa fa-envelope"></i>
+                                Messages
+                                <span class="badge badge-success">5</span>
+                            </a>
+                        </li>
+
+                        <li class="divider"></li>
+
+                        <li>
+                            <a href="#">
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                    <!-- BEGIN User Dropdown -->
+                </li>
+                <!-- END Button User -->
+            </ul>
+            <ul class="nav flaty-nav navbar-collapse collapse" id="nav-horizontal">
+                <li class="notification_parent_div">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-desktop"></i>
+                        <span class="nav_text_all">Lead CRM</span>
+                        <span class="notification_nav">9+</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">CRM
+                                    Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a
+                                    href='lead_form.html'>Lead Form</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a
+                                    href='show_pl_od_leads.html'>PL & OD
+                                    Leads</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
+                                    Leads</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Login CRM</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">PL & OD
+                                    Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
+                                    Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">HRMS</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">PL & OD
+                                    Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
+                                    Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Tickect</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Open Ticket</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Close
+                                    Ticket</a>
+                            </div>
+
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-edit"></i>
+                        <span class="nav_text_all">Task</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Login Task</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Leads Task</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-file"></i>
+                        <span class="nav_text_all">Warning</span>
+                        <b class="arrow fa fa-caret-down"></b>
+                    </a>
+                    <ul class="dropdown-menu dropdown-navbar">
+                        <div class="" role="toolbar" aria-label="...">
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Dashboard</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">PL & OD
+                                    Login</a>
+                            </div>
+                            <div class="btn-group btn btn-pill" role="group" aria-label="..."><a href="">Home Loan
+                                    Login</a>
+                            </div>
+                        </div>
+                    </ul>
+                </li>
+
+            </ul>
+            <!-- END Horizontal Menu -->
+
+        </div>
+        <!-- BEGIN Container -->
+        <div class="container" id="main-container">
+            <!-- BEGIN Content -->
+            <div id="main-content">
+                <!-- BEGIN Page Title -->
+                <div class="page-title  ">
+                    <div style="display: flex; justify-content: space-between;">
+                        <h3 class="theam_color_text"><i class="fa fa-money"></i> Expense</h3>
+                        <div class="zxyzz">
+                            <button type="button" class="btn btn-info" id="openModalBtn">
+                                Create Expense
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Page Title -->
+
+                <!-- Dashboard -->
+                <div class="row" style="margin-top: 20px">
+                    <div class="col-lg-2">
+                        <div class="card punch_card">
+                            <h5 class="punch_card_text">Total Expenses</h5>
+                            <h6 class="punch_card_text">₹ 18000</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="card punch_card">
+                            <h5 class="punch_card_text">Pending</h5>
+                            <h6 class="punch_card_text">₹ 1800</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="card punch_card">
+                            <h5 class="punch_card_text">Approved</h5>
+                            <h6 class="punch_card_text">₹ 15000</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="card punch_card">
+                            <h5 class="punch_card_text">Rejected</h5>
+                            <h6 class="punch_card_text">₹ 1800</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="card punch_card">
+                            <h5 class="punch_card_text">Total Paid</h5>
+                            <h6 class="punch_card_text">₹ 10000</h6>
+                        </div>
+                    </div>
+                    <div class="col-lg-2">
+                        <div class="card punch_card">
+                            <h5 class="punch_card_text">Total Deducted</h5>
+                            <h6 class="punch_card_text">₹ 1800</h6>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BEGIN Main Content -->
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tabbable">
+                            <ul id="myTab1" class="nav nav-tabs">
+                                <li class="active"><a href="#pending" data-toggle="tab"><i
+                                            class="fa fa-user"></i>Pending <span class="notification_nav">25</span></a>
+                                </li>
+                                <li><a href="#approved" data-toggle="tab"><i class="fa fa-user"></i>Approved <span
+                                            class="notification_nav">2</span></a></li>
+                                <li><a href="#rejected" data-toggle="tab"><i class="fa fa-user"></i>Rejected <span
+                                            class="notification_nav">5</span></a></li>
+                                <li><a href="#paid" data-toggle="tab"><i class="fa fa-user"></i>Paid <span
+                                            class="notification_nav">7</span></a></li>
+                                <li><a href="#deducted" data-toggle="tab"><i class="fa fa-user"></i>Deducted <span
+                                            class="notification_nav">9</span></a></li>
+                            </ul>
+                            <div id="myTabContent1" class="tab-content">
+                                <!-- pending table -->
+                                <div class="tab-pane fade in active all_tabs_bg" id="pending">
+                                    <div class="boligation_tabls">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Assign</option>
+                                                        <option value="1">Admin Panel</option>
+                                                        <option value="1">Team</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Payment Type</option>
+                                                        <option value="1">Salary Deducation</option>
+                                                        <option value="1">Company Payment</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" style="margin-top: 20px;">
+                                                <div class="table-responsive" style="border:0">
+                                                    <table class="table table-advance" id="table1">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width:18px"><input type="checkbox"></th>
+                                                                <th>created by</th>
+                                                                <th>status</th>
+                                                                <th>subject</th>
+                                                                <th>message</th>
+                                                                <th>type</th>
+                                                                <th>payment</th>
+                                                                <th>customer name</th>
+                                                                <th>date</th>
+                                                                <th>time</th>
+                                                                <th>assign</th>
+                                                                <th>action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-flag-blue">
+                                                                <td><input type="checkbox"></td>
+                                                                <td>admin</td>
+                                                                <td><span class="label label-warning">Pending</span>
+                                                                </td>
+                                                                <td>Aadhar Update</td>
+                                                                <td>h</td>
+                                                                <td>Salary Deduction</td>
+                                                                <td>Salary</td>
+                                                                <td>Rahul</td>
+                                                                <td>2025-02-19</td>
+                                                                <td>10:27 PM</td>
+                                                                <td class="text-center">Admin Panel, Team1 </td>
+                                                                <td>
+                                                                    <a
+                                                                        class="btn btn-primary openModalBtnReview">Review</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- approved table -->
+                                <div class="tab-pane fade in all_tabs_bg" id="approved">
+                                    <div class="boligation_tabls">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Assign</option>
+                                                        <option value="1">Admin Panel</option>
+                                                        <option value="1">Team</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Payment Type</option>
+                                                        <option value="1">Salary Deducation</option>
+                                                        <option value="1">Company Payment</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" style="margin-top: 20px;">
+                                                <div class="table-responsive" style="border:0">
+                                                    <table class="table table-advance" id="table2">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width:18px"><input type="checkbox"></th>
+                                                                <th>created by</th>
+                                                                <th>status</th>
+                                                                <th>subject</th>
+                                                                <th>message</th>
+                                                                <th>type</th>
+                                                                <th>payment</th>
+                                                                <th>customer name</th>
+                                                                <th>date</th>
+                                                                <th>time</th>
+                                                                <th>assign</th>
+                                                                <th>action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-flag-blue">
+                                                                <td><input type="checkbox"></td>
+                                                                <td>admin</td>
+                                                                <td><span class="label label-warning">Pending</span>
+                                                                </td>
+                                                                <td>Aadhar Update</td>
+                                                                <td>h</td>
+                                                                <td>Salary Deduction</td>
+                                                                <td>Salary</td>
+                                                                <td>Rahul</td>
+                                                                <td>2025-02-19</td>
+                                                                <td>10:27 PM</td>
+                                                                <td class="text-center">Admin Panel, Team1 </td>
+                                                                <td>
+                                                                    <a
+                                                                        class="btn btn-primary openModalBtnReview">Review</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- rejected table -->
+                                <div class="tab-pane fade in all_tabs_bg" id="rejected">
+                                    <div class="boligation_tabls">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Assign</option>
+                                                        <option value="1">Admin Panel</option>
+                                                        <option value="1">Team</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Payment Type</option>
+                                                        <option value="1">Salary Deducation</option>
+                                                        <option value="1">Company Payment</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" style="margin-top: 20px;">
+                                                <div class="table-responsive" style="border:0">
+                                                    <table class="table table-advance" id="table3">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width:18px"><input type="checkbox"></th>
+                                                                <th>created by</th>
+                                                                <th>status</th>
+                                                                <th>subject</th>
+                                                                <th>message</th>
+                                                                <th>type</th>
+                                                                <th>payment</th>
+                                                                <th>customer name</th>
+                                                                <th>date</th>
+                                                                <th>time</th>
+                                                                <th>assign</th>
+                                                                <th>action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-flag-blue">
+                                                                <td><input type="checkbox"></td>
+                                                                <td>admin</td>
+                                                                <td><span class="label label-warning">Pending</span>
+                                                                </td>
+                                                                <td>Aadhar Update</td>
+                                                                <td>h</td>
+                                                                <td>Salary Deduction</td>
+                                                                <td>Salary</td>
+                                                                <td>Rahul</td>
+                                                                <td>2025-02-19</td>
+                                                                <td>10:27 PM</td>
+                                                                <td class="text-center">Admin Panel, Team1 </td>
+                                                                <td>
+                                                                    <a
+                                                                        class="btn btn-primary openModalBtnReview">Review</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- paid table -->
+                                <div class="tab-pane fade in all_tabs_bg" id="paid">
+                                    <div class="boligation_tabls">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Assign</option>
+                                                        <option value="1">Admin Panel</option>
+                                                        <option value="1">Team</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Payment Type</option>
+                                                        <option value="1">Salary Deducation</option>
+                                                        <option value="1">Company Payment</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" style="margin-top: 20px;">
+                                                <div class="table-responsive" style="border:0">
+                                                    <table class="table table-advance" id="table4">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width:18px"><input type="checkbox"></th>
+                                                                <th>created by</th>
+                                                                <th>status</th>
+                                                                <th>subject</th>
+                                                                <th>message</th>
+                                                                <th>type</th>
+                                                                <th>payment</th>
+                                                                <th>customer name</th>
+                                                                <th>date</th>
+                                                                <th>time</th>
+                                                                <th>assign</th>
+                                                                <th>action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-flag-blue">
+                                                                <td><input type="checkbox"></td>
+                                                                <td>admin</td>
+                                                                <td><span class="label label-warning">Pending</span>
+                                                                </td>
+                                                                <td>Aadhar Update</td>
+                                                                <td>h</td>
+                                                                <td>Salary Deduction</td>
+                                                                <td>Salary</td>
+                                                                <td>Rahul</td>
+                                                                <td>2025-02-19</td>
+                                                                <td>10:27 PM</td>
+                                                                <td class="text-center">Admin Panel, Team1 </td>
+                                                                <td>
+                                                                    <a
+                                                                        class="btn btn-primary openModalBtnReview">Review</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- deducted table -->
+                                <div class="tab-pane fade in all_tabs_bg" id="deducted">
+                                    <div class="boligation_tabls">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Assign</option>
+                                                        <option value="1">Admin Panel</option>
+                                                        <option value="1">Team</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <div class="controls">
+                                                    <select class="form-control" data-placeholder="Assignn"
+                                                        tabindex="1">
+                                                        <option value="">Payment Type</option>
+                                                        <option value="1">Salary Deducation</option>
+                                                        <option value="1">Company Payment</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12" style="margin-top: 20px;">
+                                                <div class="table-responsive" style="border:0">
+                                                    <table class="table table-advance" id="table4">
+                                                        <thead>
+                                                            <tr>
+                                                                <th style="width:18px"><input type="checkbox"></th>
+                                                                <th>created by</th>
+                                                                <th>status</th>
+                                                                <th>subject</th>
+                                                                <th>message</th>
+                                                                <th>type</th>
+                                                                <th>payment</th>
+                                                                <th>customer name</th>
+                                                                <th>date</th>
+                                                                <th>time</th>
+                                                                <th>assign</th>
+                                                                <th>action</th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr class="table-flag-blue">
+                                                                <td><input type="checkbox"></td>
+                                                                <td>admin</td>
+                                                                <td><span class="label label-warning">Pending</span>
+                                                                </td>
+                                                                <td>Aadhar Update</td>
+                                                                <td>h</td>
+                                                                <td>Salary Deduction</td>
+                                                                <td>Salary</td>
+                                                                <td>Rahul</td>
+                                                                <td>2025-02-19</td>
+                                                                <td>10:27 PM</td>
+                                                                <td class="text-center">Admin Panel, Team1 </td>
+                                                                <td>
+                                                                    <a
+                                                                        class="btn btn-primary openModalBtnReview">Review</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- END Main Content -->
+            </div>
+            <!-- END Content -->
+        </div>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>2024 © Admin Template.</p>
+        </footer>
+        <!-- Scroll Up Button -->
+        <a id="btn-scrollup" class="btn btn-circle btn-lg" href="#"><i class="fa fa-chevron-up"></i></a>
+    </div>
+
+    <!--basic scripts-->
+    <script src="ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="assets/jquery/jquery-2.1.1.min.js"><\/script>')</script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="assets/jquery-cookie/jquery.cookie.js"></script>
+    <script type="text/javascript" src="assets/data-tables/jquery.dataTables.js"></script>
+    <script type="text/javascript" src="assets/data-tables/bootstrap3/dataTables.bootstrap.js"></script>
+    <!--flaty scripts-->
+    <script src="js/flaty.js"></script>
+    <script src="js/flaty-demo-codes.js"></script>
+    <script type="text/javascript" src="assets/chosen-bootstrap/chosen.jquery.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-inputmask/bootstrap-inputmask.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-tags-input/jquery.tagsinput.min.js"></script>
+    <script type="text/javascript" src="assets/jquery-pwstrength/jquery.pwstrength.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-fileupload/bootstrap-fileupload.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-duallistbox/duallistbox/bootstrap-duallistbox.js"></script>
+    <script type="text/javascript" src="assets/dropzone/downloads/dropzone.min.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-timepicker/js/bootstrap-timepicker.js"></script>
+    <script type="text/javascript" src="assets/clockface/js/clockface.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-colorpicker/js/bootstrap-colorpicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-daterangepicker/date.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-switch/static/js/bootstrap-switch.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-wysihtml5/wysihtml5-0.3.0.js"></script>
+    <script type="text/javascript" src="assets/bootstrap-wysihtml5/bootstrap-wysihtml5.js"></script>
+    <script type="text/javascript" src="assets/ckeditor/ckeditor.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#openModalBtn').on('click', function () {
+                $('#myModal').modal('show');
+            });
+
+            $('#myModal').on('shown.bs.modal', function () {
+                var now = new Date();
+
+                // Format date as YYYY-MM-DD
+                var formattedDate = now.toISOString().split('T')[0];
+                $('#expenseDate').val(formattedDate);
+
+                // Format time as HH:MM (24-hour format)
+                var hours = now.getHours().toString().padStart(2, '0');
+                var minutes = now.getMinutes().toString().padStart(2, '0');
+                $('#expenseTime').val(hours + ":" + minutes);
+            });
+
+            $('#saveChangesBtn').on('click', function () {
+                alert('Your changes have been saved!');
+                $('#myModal').modal('hide');
+            });
+
+            $('.openModalBtnReview').on('click', function () {
+                $('#reviewModal').modal('show');
+            });
+        });
+    </script>
+</body>
+
+</html>
+
+<!-- modal for creating expense -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="color: black;" id="modalTitle">Create New Expense</h4>
+            </div>
+            <div class="">
+                <div class="col-md-12">
+                    <form class="mail-compose form-horizontal" action="#">
+                        <p><input type="text" placeholder="Created By" class="form-control" value="HR" readonly></p>
+                        <p><input type="text" placeholder="Subject" class="form-control"></p>
+                        <p><input type="text" placeholder="Your Name" class="form-control"></p>
+                        <p><input type="number" placeholder="Amount" class="form-control"></p>
+                        <p><label for="">Attach Photo or PDF</label><input type="file" placeholder="Amount"
+                                class="form-control"></p>
+                        <div class="controls">
+                            <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
+                                <option value="1">Deducated from salary</option>
+                                <option value="2">Pay by company</option>
+                            </select>
+                        </div>
+                        <div class="row" style="margin-top: 10px;">
+                            <div class="col-sm-6">
+                                <input type="date" class="form-control" id="expenseDate">
+                            </div>
+                            <div class="col-sm-6">
+                                <input type="time" class="form-control" id="expenseTime">
+                            </div>
+                        </div>
+                        <div id="commentBox" class="comment-box" style="margin-top: 10px;">
+                            <textarea placeholder="Write a comment..." style="width: 100%; height: 100px;"></textarea>
+                        </div>
+                        <div style="margin-top: 10px;">
+                            <button type="submit" class="btn btn-primary"><i class="fa fa-rocket"></i>
+                                Add</button>
+                            <a type="button" class="btn" data-dismiss="modal">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- modal for showing expense data -->
+<div id="reviewModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title" style="color: black;" id="modalTitle">Review Expense</h4>
+            </div>
+            <div class="">
+                <div class="col-md-12">
+                    <p><strong>ID:</strong> <span id="review-id">3</span></p>
+                    <p><strong>Created By:</strong> <span id="review-created">Admin Panel - 2025-02-19 01:17 PM</span>
+                    </p>
+                    <p><strong>Subject:</strong> <span id="review-subject">Rent Agreement</span></p>
+                    <p><strong>Amount:</strong> ₹<span id="review-amount">1000</span></p>
+                    <p><strong>Type:</strong> <span id="review-type">Salary Deduction</span></p>
+                    <p><strong>Date:</strong> <span id="review-date">2025-02-19</span></p>
+                    <p><strong>Time:</strong> <span id="review-time">01:17 PM</span></p>
+                    <button id="approve-btn" class="btn btn-primary approve-btn">Approve</button>
+                    <button id="mark-as-paid" class="btn btn-primary mark-as-paid">Mark as Paid</button>
+                    <button id="reject-btn" class="btn btn-danger reject-btn">Reject</button>
+                    <button class="btn action-btn" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>

@@ -33,22 +33,14 @@
         .table.table-advance,
         .table.table-advance th,
         .table.table-advance td {
-            /* border: 1px solid blue; */
-            /* border: 1px solid #03b0f5; */
             border-top: 1px solid #03b0f5;
             border-bottom: 1px solid #03b0f5;
             border-right: 1px solid #03b0f5;
-            /* Adjust color as needed */
             border-collapse: collapse;
         }
 
         .row th {
             border-right: 1px solid #03b0f5;
-        }
-
-        .table.table-advance,
-        .table.table-advance th {
-            padding-right: 18px;
         }
 
         .table-container {
@@ -66,7 +58,6 @@
         th,
         td {
             white-space: nowrap;
-            padding: 8px;
             text-align: left;
         }
 
@@ -80,7 +71,6 @@
             text-align: center !important;
         }
 
-        /* Fix the first two columns */
         th:first-child,
         td:first-child {
             position: sticky;
@@ -89,13 +79,11 @@
             z-index: 2;
         }
 
-        /* Ensuring the fixed columns have a border */
         th:first-child,
         td:first-child {
             z-index: 3;
         }
 
-        /* Scrollable Table */
         .scrollable-table {
             display: block;
             overflow-x: auto;
@@ -104,15 +92,6 @@
 
         .punchin_hover:hover {
             background-color: none;
-        }
-
-        /* .table-advance {
-    border-collapse: separate;
-    border-spacing: 20px !important;
-  } */
-        .table-advance td,
-        .table-advance th {
-            padding: 20px !important;
         }
 
         .image-container {
@@ -142,37 +121,45 @@
             color: aliceblue !important;
         }
 
-        .day-header {
-            color: aliceblue !important;
-        }
-
-        .name-cell {
-            font-size: 17px;
-        }
-
-        .name-text {
-            font-size: 17px;
-        }
-
-        .green-bg {
-            background-image: linear-gradient(green, #49e663);
-        }
-
-        .orange-bg {
-            background-image: linear-gradient(orange, #e9ae40);
-        }
-
-        .red-bg {
-            background-image: linear-gradient(red, #ee3232);
-        }
-
-        .yellow-bg {
-            background-image: linear-gradient(yellow, #9e9e29);
-            color: black !important;
+        input[type="month"]::-webkit-calendar-picker-indicator {
+            filter: invert(1);
         }
     </style>
 
-<!-- Attendance Details Modal -->
+    <style>
+        .full-day {
+            color: black !important;
+            background-color: #fff3e0;
+            /* Light Orange */
+        }
+
+        .half-day {
+            color: black !important;
+            background-color: #ffff00;
+            /* Yellow */
+        }
+
+        .leave-approve {
+            color: black !important;
+            background-color: #ff5722;
+            /* Red-Orange */
+        }
+
+        .leave-not-approve {
+            color: black !important;
+            background-color: #d81b60;
+            /* Dark Pink */
+        }
+
+        .off {
+            color: white !important;
+            background-color: #0288d1;
+            /* Blue */
+        }
+    </style>
+
+
+    <!-- Attendance Details Modal -->
     <style>
         .ak_container {
             background-color: #fff;
@@ -527,98 +514,159 @@
                         </div>
                     </div>
                 </div>
+                <div class="row"
+                    style="width: 100%; display: flex; gap: 10px; align-items: center; justify-content: center; margin: 10px 0;">
+                    <div style="border: none; padding: 0 10px; border-radius: 10px;">
+                        <h2>Monthly Attendance - <input type="month" id="monthPicker"
+                                style="border: none; background-color: transparent; color: white; accent-color: white;">
+                        </h2>
+                    </div>
 
+                    <!-- <div style="display: flex; gap: 10px; border: none; padding: 10px 10px; border-radius: 10px;">
+                        <div
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <label for="">1</label>
+                            <div style="height: 20px; width: 20px; background-color: #fff3e0;" data-toggle="tooltip"
+                                title="Full day"></div>
+                        </div>
+                        <div
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <label for="">1</label>
+                            <div style="height: 20px; width: 20px; background-color: #0288d1;" data-toggle="tooltip"
+                                title="Off"></div>
+                        </div>
+                        <div
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <label for="">0.5</label>
+                            <div style="height: 20px; width: 20px; background-color: #ffff00;" data-toggle="tooltip"
+                                title="Half Day"></div>
+                        </div>
+                        <div
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <label for="">1</label>
+                            <div style="height: 20px; width: 20px; background-color: #ff5722;" data-toggle="tooltip"
+                                title="Leave ( Approved )"></div>
+                        </div>
+                        <div
+                            style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                            <label for="">-1</label>
+                            <div style="height: 20px; width: 20px; background-color: #d81b60;" data-toggle="tooltip"
+                                title="Leave ( No Approved )"></div>
+                        </div>
+                    </div> -->
+                </div>
                 <!-- table start -->
                 <div class="row">
-                    <div class="col-md-12 table-margin">
+                    <div class="col-md-12">
                         <div class="table-responsive table-container">
-                            <table class="table table-advance custom-table" id="table1">
+                            <table class="table table-advance custom-table">
                                 <thead>
                                     <tr>
                                         <th class="name-header">Name</th>
-                                        <th class="day-header">1 Sat</th>
-                                        <th class="day-header">2 Sun</th>
-                                        <th class="day-header sorting_disabled">3 Mon</th>
-                                        <th class="day-header sorting_disabled">4 Tue</th>
-                                        <th class="day-header">5 Wed</th>
-                                        <th class="day-header">6 Thu</th>
-                                        <th class="day-header">7 Fri</th>
-                                        <th class="day-header">8 Sat</th>
-                                        <th class="day-header">9 Sun</th>
-                                        <th class="day-header">10 Mon</th>
-                                        <th class="day-header">11 Tue</th>
-                                        <th class="day-header">12 Wed</th>
-                                        <th class="day-header">13 Thu</th>
-                                        <th class="day-header">14 Fri</th>
-                                        <th class="day-header">15 Sat</th>
-                                        <th class="day-header">16 Sun</th>
-                                        <th class="day-header">17 Mon</th>
-                                        <th class="day-header">18 Tue</th>
-                                        <th class="day-header">19 Wed</th>
-                                        <th class="day-header">20 Thu</th>
-                                        <th class="day-header">21 Fri</th>
-                                        <th class="day-header">22 Sat</th>
-                                        <th class="day-header">23 Sun</th>
-                                        <th class="day-header">24 Mon</th>
-                                        <th class="day-header">25 Tue</th>
-                                        <th class="day-header">26 Wed</th>
-                                        <th class="day-header">27 Thu</th>
-                                        <th class="day-header">28 Fri</th>
-                                        <th class="day-header">29 Sat</th>
-                                        <th class="day-header">30 Sun</th>
-                                        <th class="day-header">Paid Leave</th>
-                                        <th class="day-header">Total Present</th>
+                                        <th class="day-header">1 <br> Sat</th>
+                                        <th class="day-header">2 <br> Sun</th>
+                                        <th class="day-header sorting_disabled">3 <br> Mon</th>
+                                        <th class="day-header sorting_disabled">4 <br> Tue</th>
+                                        <th class="day-header">5 <br> Wed</th>
+                                        <th class="day-header">6 <br> Thu</th>
+                                        <th class="day-header">7 <br> Fri</th>
+                                        <th class="day-header">8 <br> Sat</th>
+                                        <th class="day-header">9 <br> Sun</th>
+                                        <th class="day-header">10 <br> Mon</th>
+                                        <th class="day-header">11 <br> Tue</th>
+                                        <th class="day-header">12 <br> Wed</th>
+                                        <th class="day-header">13 <br> Thu</th>
+                                        <th class="day-header">14 <br> Fri</th>
+                                        <th class="day-header">15 <br> Sat</th>
+                                        <th class="day-header">16 <br> Sun</th>
+                                        <th class="day-header">17 <br> Mon</th>
+                                        <th class="day-header">18 <br> Tue</th>
+                                        <th class="day-header">19 <br> Wed</th>
+                                        <th class="day-header">20 <br> Thu</th>
+                                        <th class="day-header">21 <br> Fri</th>
+                                        <th class="day-header">22 <br> Sat</th>
+                                        <th class="day-header">23 <br> Sun</th>
+                                        <th class="day-header">24 <br> Mon</th>
+                                        <th class="day-header">25 <br> Tue</th>
+                                        <th class="day-header">26 <br> Wed</th>
+                                        <th class="day-header">27 <br> Thu</th>
+                                        <th class="day-header">28 <br> Fri</th>
+                                        <th class="day-header">29 <br> Sat</th>
+                                        <th class="day-header">30 <br> Sun</th>
+                                        <th class="day-header">Total <br> Present</th>
+                                        <th class="day-header">Paid <br> Leave</th>
+                                        <th class="day-header">Earned <br> Leave</th>
+                                        <th class="day-header">Final <br> Attendance</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td class="name-cell">
-                                            <span class="name-text"><b>Ravindra</b></span><br>
-                                            <span>Achievers | Sr. Executive</span><br>
-                                            <span>Emp-ID : RM02</span>
+                                            <span style="font-size: 17px;"><b>Ravindra</b></span><br>
+                                            <span style="font-size: 12px;">Achievers | Sr. Executive</span><br>
+                                            <span style="font-size: 12px;">Emp-ID : RM02</span>
                                         </td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
                                         </td>
-                                        <td class="opentdModal red-bg"><b>-1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal yellow-bg"><b>0.5</b><br><span>6:00am | 12:00pm</span>
+                                        <td class="opentdModal off"><b>1</b><br>Off
                                         </td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
                                         </td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal yellow-bg"><b>0.5</b><br><span>6:00am | 12:00pm</span>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
                                         </td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
                                         </td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
                                         </td>
-                                        <td class="opentdModal yellow-bg"><b>0.5</b><br><span>6:00am | 12:00pm</span>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
                                         </td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
                                         </td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal yellow-bg"><b>0.5</b><br><span>6:00am | 12:00pm</span>
+                                        <td class="opentdModal off"><b>1</b><br>Off
                                         </td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal green-bg"><b>1</b><br><span>6:00am | 7:00pm</span></td>
-                                        <td class="opentdModal orange-bg"><b>0</b><br><span>00:00am | 00:00pm</span>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
                                         </td>
-                                        <td>5</td>
-                                        <td>25</td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal off"><b>1</b><br>Off
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal off"><b>1</b><br>Off
+                                        </td>
+                                        <td class="opentdModal full-day"><b>1</b><br><span>6:00am <br> 7:00pm</span>
+                                        </td>
+                                        <td class="opentdModal half-day"><b>0.5</b><br><span>6:00am <br> 12:00pm</span>
+                                        </td>
+                                        <td class="opentdModal half-day"><b>0.5</b><br><span>6:00am <br> 12:00pm</span>
+                                        </td>
+                                        <td class="opentdModal half-day"><b>0.5</b><br><span>6:00am <br> 12:00pm</span>
+                                        </td>
+                                        <td class="opentdModal leave-approve"><b>0</b><br><span>Leave</span></td>
+                                        <td class="opentdModal leave-not-approve"><b>-1</b><br><span>Leave</span></td>
+                                        <td class="opentdModal off"><b>1</b><br><span>Off</span></td>
+                                        <td>26.5</td>
+                                        <td>1</td>
+                                        <td>0</td>
+                                        <td>27.5</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -725,6 +773,14 @@
                 }
             });
         });
+    </script>
+
+    <!-- find current month and show in month input box -->
+    <script>
+        let today = new Date();
+        let currentMonth = today.toISOString().slice(0, 7);
+
+        document.getElementById("monthPicker").value = currentMonth;
     </script>
 
 
@@ -1026,8 +1082,9 @@ punch in modal
                 </h4>
             </div>
             <div class="modal-body">
-                <label class="text-dark control-label" style="font-weight: bold">
-                    Today Login's</label>
+                <label class="text-dark control-label" style="font-weight: bold">Today Login Commitment</label>
+                <input type="text" placeholder="" style="font-weight: bold" class="form-control">
+                <label class="text-dark control-label" style="font-weight: bold">Today Lead Commitment</label>
                 <input type="text" placeholder="" style="font-weight: bold" class="form-control">
                 <div>
                     <h4 class="modal-title text-center"
@@ -1269,6 +1326,7 @@ punch out modal
 </script>
 
 <!-- After Punch out modal -->
+<!-- id="myModal2" class="modal fade" role="dialog" -->
 <div id="myModal2" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
@@ -1276,16 +1334,9 @@ punch out modal
                 <button type="button" class="close" data-dismiss="modal">
                     &times;
                 </button>
-                <div>
-                    <label class="text-dark control-label" style="font-weight: bold">
-                        Today your leads</label>
-                    <input type="text" placeholder="" style="font-weight: bold" class="form-control">
-                </div>
-                <div style="margin-top: 20px">
-                    <label class="text-dark control-label" style="font-weight: bold">
-                        Your team leads</label>
-                    <input type="text" placeholder="" style="font-weight: bold" class="form-control">
-                </div>
+                <h4 class="modal-title text-center" style="color: black; font-weight: bold">
+                    Commitment vs Achievement
+                </h4>
             </div>
             <div class="modal-body">
                 <!-- <div style="margin-top: 20px">
@@ -1463,22 +1514,32 @@ Attendance Details Modal
             <div class="modal-body">
                 <div class="image-container"
                     style="width: 100%; display: flex; align-items: center; justify-content: space-around;">
-                    <div>
-                        <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
-                            alt="Punch In Image" height="120px">
-                        <div class="punch-details">
-                            <p>Punch In Date: 2023-10-01</p>
-                            <p>Punch In Time: 09:00 AM</p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div>
+                                    <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+                                        alt="Punch In Image" height="120px">
+                                    <div class="punch-details">
+                                        <p>Punch In Date: 2023-10-01</p>
+                                        <p>Punch In Time: 09:00 AM</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div>
+                                    <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
+                                        alt="Punch Out Image" height="120px">
+                                    <div class="punch-details">
+                                        <p>Punch Out Date: 2023-10-01</p>
+                                        <p>Punch Out Time: 06:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div>
-                        <img src="https://t3.ftcdn.net/jpg/02/43/12/34/360_F_243123463_zTooub557xEWABDLk0jJklDyLSGl2jrr.jpg"
-                            alt="Punch Out Image" height="120px">
-                        <div class="punch-details">
-                            <p>Punch Out Date: 2023-10-01</p>
-                            <p>Punch Out Time: 06:00 PM</p>
-                        </div>
-                    </div>
+
                 </div>
             </div>
         </div>
