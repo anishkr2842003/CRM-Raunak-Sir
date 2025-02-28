@@ -270,6 +270,12 @@
         }
     </style>
 
+    <style>
+        .chosen-container {
+            background-color: whitesmoke;
+        }
+    </style>
+
 
 
 </head>
@@ -550,9 +556,28 @@
                 <div class="row"
                     style="width: 100%; display: flex; gap: 10px; align-items: center; justify-content: center; margin: 10px 0;">
                     <div style="border: none; padding: 0 10px; border-radius: 10px;">
-                        <h2>Monthly Attendance - <input type="month" id="monthPicker"
-                                style="border: none; background-color: transparent; color: white; accent-color: white;">
+                        <h2>Monthly Attendance - February 2025
                         </h2>
+                        <div class="col-sm-12">
+                            <div class="col-sm-6">
+                                <select name="task_type" id="edit_task_type" data-placeholder="Type Task"
+                                    style="background-color: whitesmoke !important;"
+                                    class="form-control chosen EditChoosen disabled-div" tabindex="-1">
+                                    <option value="all">All Employee</option>
+                                    <option value="emp1">EMP 1</option>
+                                    <option value="emp2">EMP 2</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <select name="task_type" id="edit_task_type" data-placeholder="Type Task"
+                                    style="background-color: whitesmoke !important;"
+                                    class="form-control chosen EditChoosen disabled-div" tabindex="-1">
+                                    <option value="all">Chooese Month</option>
+                                    <option value="emp1">November</option>
+                                    <option value="emp2">December</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <!-- table start -->
@@ -3310,14 +3335,14 @@ Attendance Details Modal
                             </div>
                             <p class="col-sm-12">
                                 <label for=""><b>Change Attendance : </b></label>
-                            <b>
-                                <select name="" id="">
-                                    <option value="1">Full Day (1)</option>
-                                    <option value="0.5">Half Day (0.5)</option>
-                                    <option value="0">Leave (0)</option>
-                                    <option value="-1">Leave Not Approved (-1)</option>
-                                </select>
-                            </b>
+                                <b>
+                                    <select name="" id="">
+                                        <option value="1">Full Day (1)</option>
+                                        <option value="0.5">Half Day (0.5)</option>
+                                        <option value="0">Leave (0)</option>
+                                        <option value="-1">Leave Not Approved (-1)</option>
+                                    </select>
+                                </b>
                             </p>
                             <p class="col-sm-12" style="margin-top: 10px;"><textarea class="form-control wysihtml5"
                                     rows="6"></textarea></p>
