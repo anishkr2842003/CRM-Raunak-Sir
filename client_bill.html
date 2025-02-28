@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Dashboard - Loan</title>
+    <title>Dashboard - Client Bill</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--base css styles-->
@@ -266,10 +266,10 @@
                 <!-- BEGIN Page Title -->
                 <div class="page-title  ">
                     <div style="display: flex; justify-content: space-between;">
-                        <h3 class="theam_color_text"><i class="fa fa-university"></i> Advance</h3>
+                        <h3 class="theam_color_text"><i class="fa fa-university"></i> Client Bill</h3>
                         <div class="zxyzz">
                             <button type="button" class="btn btn-info" id="openModalBtn">
-                                Create Advance
+                                Create Client Bill
                             </button>
                         </div>
                     </div>
@@ -318,21 +318,7 @@
                                 </li>
                                 <li>
                                     <a href="#approved" data-toggle="tab">
-                                        <i class="fa fa-user"></i>Approved <span class="notification_nav">2</span>
-                                        <h5 class="m-t-10"><span class="btn  btn-xs all-amount-btn">Amount : ₹
-                                                1234567890</span></h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#rejected" data-toggle="tab">
-                                        <i class="fa fa-user"></i>Rejected <span class="notification_nav">5</span>
-                                        <h5 class="m-t-10"><span class="btn  btn-xs all-amount-btn">Amount : ₹
-                                                1234567890</span></h5>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#paid" data-toggle="tab">
-                                        <i class="fa fa-user"></i>Paid <span class="notification_nav">7</span>
+                                        <i class="fa fa-user"></i>Complete <span class="notification_nav">2</span>
                                         <h5 class="m-t-10"><span class="btn  btn-xs all-amount-btn">Amount : ₹
                                                 1234567890</span></h5>
                                     </a>
@@ -374,7 +360,6 @@
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
-                                                                <th>assign</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -393,7 +378,6 @@
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
-                                                                <td class="text-center">Admin Panel, Team1 </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -423,7 +407,6 @@
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
-                                                                <th>assign</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -442,105 +425,6 @@
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
-                                                                <td class="text-center">Admin Panel, Team1 </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- rejected table -->
-                                <div class="tab-pane fade in all_tabs_bg" id="rejected">
-                                    <div class="boligation_tabls">
-                                        <div class="row">
-                                            <div class="col-md-12" style="margin-top: 20px;">
-                                                <div class="table-responsive" style="border:0">
-                                                    <table class="table table-advance" id="table1">
-                                                        <thead>
-                                                            <tr>
-                                                                <th style="width:18px"><input type="checkbox"></th>
-                                                                <th>created by</th>
-                                                                <th>status</th>
-                                                                <th>subject</th>
-                                                                <th>message</th>
-                                                                <th>file</th>
-                                                                <th>type</th>
-                                                                <th>payment</th>
-                                                                <th>customer name</th>
-                                                                <th>date</th>
-                                                                <th>time</th>
-                                                                <th>assign</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="table-flag-blue">
-                                                                <td><input type="checkbox"></td>
-                                                                <td>admin</td>
-                                                                <td><span class="label label-warning">Pending</span>
-                                                                </td>
-                                                                <td><a href="#" class="openModalBtnReview">Aadhar
-                                                                        Update</a></td>
-                                                                <td>h</td>
-                                                                <td><a href="#" class="openFileModalBtn"><i
-                                                                            class="fa fa-eye"></i></a></td>
-                                                                <td>Salary Deduction</td>
-                                                                <td>Salary</td>
-                                                                <td>Rahul</td>
-                                                                <td>2025-02-19</td>
-                                                                <td>10:27 PM</td>
-                                                                <td class="text-center">Admin Panel, Team1 </td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- paid table -->
-                                <div class="tab-pane fade in all_tabs_bg" id="paid">
-                                    <div class="boligation_tabls">
-                                        <div class="row">
-                                            <div class="col-md-12" style="margin-top: 20px;">
-                                                <div class="table-responsive" style="border:0">
-                                                    <table class="table table-advance" id="table1">
-                                                        <thead>
-                                                            <tr>
-                                                                <th style="width:18px"><input type="checkbox"></th>
-                                                                <th>created by</th>
-                                                                <th>status</th>
-                                                                <th>subject</th>
-                                                                <th>message</th>
-                                                                <th>file</th>
-                                                                <th>type</th>
-                                                                <th>payment</th>
-                                                                <th>customer name</th>
-                                                                <th>date</th>
-                                                                <th>time</th>
-                                                                <th>assign</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr class="table-flag-blue">
-                                                                <td><input type="checkbox"></td>
-                                                                <td>admin</td>
-                                                                <td><span class="label label-warning">Pending</span>
-                                                                </td>
-                                                                <td><a href="#" class="openModalBtnReview">Aadhar
-                                                                        Update</a></td>
-                                                                <td>h</td>
-                                                                <td><a href="#" class="openFileModalBtn"><i
-                                                                            class="fa fa-eye"></i></a></td>
-                                                                <td>Salary Deduction</td>
-                                                                <td>Salary</td>
-                                                                <td>Rahul</td>
-                                                                <td>2025-02-19</td>
-                                                                <td>10:27 PM</td>
-                                                                <td class="text-center">Admin Panel, Team1 </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -570,7 +454,6 @@
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
-                                                                <th>assign</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -589,7 +472,6 @@
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
-                                                                <td class="text-center">Admin Panel, Team1 </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -619,7 +501,6 @@
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
-                                                                <th>assign</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -638,7 +519,6 @@
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
-                                                                <td class="text-center">Admin Panel, Team1 </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -815,7 +695,7 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" style="color: black;" id="modalTitle">Create New Advance</h4>
+                <h4 class="modal-title" style="color: black;" id="modalTitle">Create New Client Bill</h4>
             </div>
             <div class="">
                 <div class="col-md-12">
@@ -825,6 +705,12 @@
                         <p><input type="number" placeholder="Amount" class="form-control"></p>
                         <p><label for="">Attach Photo or PDF</label><input type="file" placeholder="Amount"
                                 class="form-control"></p>
+                        <div class="controls">
+                            <select class="form-control" data-placeholder="Choose a Category" tabindex="1">
+                                <option value="1">Deducated from salary</option>
+                                <option value="2">Pay by company</option>
+                            </select>
+                        </div>
                         <div class="row" style="margin-top: 10px;">
                             <div class="col-sm-6">
                                 <input type="date" class="form-control" id="expenseDate">

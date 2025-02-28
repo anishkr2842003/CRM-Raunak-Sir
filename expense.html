@@ -33,6 +33,18 @@
         .table-flag-blue td {
             font-weight: 300;
         }
+
+        .all-amount-btn {
+            background-color: #03b0f5;
+            color: white;
+            font-weight: bold;
+        }
+
+        .all-amount-btn:hover {
+            background-color: #03b0f5 !important;
+            color: white !important;
+            font-weight: bold !important;
+        }
     </style>
 
 </head>
@@ -265,7 +277,7 @@
                 <!-- END Page Title -->
 
                 <!-- Dashboard -->
-                <div class="row" style="margin-top: 20px">
+                <!-- <div class="row" style="margin-top: 20px">
                     <div class="col-lg-2">
                         <div class="card punch_card">
                             <h5 class="punch_card_text">Total Expenses</h5>
@@ -302,24 +314,48 @@
                             <h6 class="punch_card_text">₹ 1800</h6>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <!-- BEGIN Main Content -->
                 <div class="row">
                     <div class="col-md-12">
                         <div class="tabbable">
                             <ul id="myTab1" class="nav nav-tabs">
-                                <li class="active"><a href="#pending" data-toggle="tab"><i
-                                            class="fa fa-user"></i>Pending <span class="notification_nav">25</span></a>
+                                <li class="active">
+                                    <a href="#pending" data-toggle="tab">
+                                        <i class="fa fa-user"></i>Pending <span class="notification_nav">25</span>
+                                        <h5 class="m-t-10"><span class="btn  btn-xs all-amount-btn">Amount : ₹
+                                                1234567890</span></h5>
+                                    </a>
                                 </li>
-                                <li><a href="#approved" data-toggle="tab"><i class="fa fa-user"></i>Approved <span
-                                            class="notification_nav">2</span></a></li>
-                                <li><a href="#rejected" data-toggle="tab"><i class="fa fa-user"></i>Rejected <span
-                                            class="notification_nav">5</span></a></li>
-                                <li><a href="#paid" data-toggle="tab"><i class="fa fa-user"></i>Paid <span
-                                            class="notification_nav">7</span></a></li>
-                                <li><a href="#deducted" data-toggle="tab"><i class="fa fa-user"></i>Deducted <span
-                                            class="notification_nav">9</span></a></li>
+                                <li>
+                                    <a href="#approved" data-toggle="tab">
+                                        <i class="fa fa-user"></i>Approved <span class="notification_nav">2</span>
+                                        <h5 class="m-t-10"><span class="btn  btn-xs all-amount-btn">Amount : ₹
+                                                1234567890</span></h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#rejected" data-toggle="tab">
+                                        <i class="fa fa-user"></i>Rejected <span class="notification_nav">5</span>
+                                        <h5 class="m-t-10"><span class="btn  btn-xs all-amount-btn">Amount : ₹
+                                                1234567890</span></h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#paid" data-toggle="tab">
+                                        <i class="fa fa-user"></i>Paid <span class="notification_nav">7</span>
+                                        <h5 class="m-t-10"><span class="btn  btn-xs all-amount-btn">Amount : ₹
+                                                1234567890</span></h5>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#deducted" data-toggle="tab">
+                                        <i class="fa fa-user"></i>Deducted <span class="notification_nav">9</span>
+                                        <h5 class="m-t-10"><span class="btn  btn-xs all-amount-btn">Amount : ₹
+                                                1234567890</span></h5>
+                                    </a>
+                                </li>
                             </ul>
                             <div id="myTabContent1" class="tab-content">
                                 <!-- pending table -->
@@ -356,13 +392,13 @@
                                                                 <th>status</th>
                                                                 <th>subject</th>
                                                                 <th>message</th>
+                                                                <th>file</th>
                                                                 <th>type</th>
                                                                 <th>payment</th>
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
                                                                 <th>assign</th>
-                                                                <th>action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -371,18 +407,17 @@
                                                                 <td>admin</td>
                                                                 <td><span class="label label-warning">Pending</span>
                                                                 </td>
-                                                                <td>Aadhar Update</td>
+                                                                <td><a href="#" class="openModalBtnReview">Aadhar
+                                                                        Update</a></td>
                                                                 <td>h</td>
+                                                                <td><a href="#" class="openFileModalBtn"><i
+                                                                            class="fa fa-eye"></i></a></td>
                                                                 <td>Salary Deduction</td>
                                                                 <td>Salary</td>
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
                                                                 <td class="text-center">Admin Panel, Team1 </td>
-                                                                <td>
-                                                                    <a
-                                                                        class="btn btn-primary openModalBtnReview">Review</a>
-                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -418,7 +453,7 @@
                                             </div>
                                             <div class="col-md-12" style="margin-top: 20px;">
                                                 <div class="table-responsive" style="border:0">
-                                                    <table class="table table-advance" id="table2">
+                                                    <table class="table table-advance" id="table1">
                                                         <thead>
                                                             <tr>
                                                                 <th style="width:18px"><input type="checkbox"></th>
@@ -426,13 +461,13 @@
                                                                 <th>status</th>
                                                                 <th>subject</th>
                                                                 <th>message</th>
+                                                                <th>file</th>
                                                                 <th>type</th>
                                                                 <th>payment</th>
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
                                                                 <th>assign</th>
-                                                                <th>action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -441,18 +476,17 @@
                                                                 <td>admin</td>
                                                                 <td><span class="label label-warning">Pending</span>
                                                                 </td>
-                                                                <td>Aadhar Update</td>
+                                                                <td><a href="#" class="openModalBtnReview">Aadhar
+                                                                        Update</a></td>
                                                                 <td>h</td>
+                                                                <td><a href="#" class="openFileModalBtn"><i
+                                                                            class="fa fa-eye"></i></a></td>
                                                                 <td>Salary Deduction</td>
                                                                 <td>Salary</td>
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
                                                                 <td class="text-center">Admin Panel, Team1 </td>
-                                                                <td>
-                                                                    <a
-                                                                        class="btn btn-primary openModalBtnReview">Review</a>
-                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -488,7 +522,7 @@
                                             </div>
                                             <div class="col-md-12" style="margin-top: 20px;">
                                                 <div class="table-responsive" style="border:0">
-                                                    <table class="table table-advance" id="table3">
+                                                    <table class="table table-advance" id="table1">
                                                         <thead>
                                                             <tr>
                                                                 <th style="width:18px"><input type="checkbox"></th>
@@ -496,13 +530,13 @@
                                                                 <th>status</th>
                                                                 <th>subject</th>
                                                                 <th>message</th>
+                                                                <th>file</th>
                                                                 <th>type</th>
                                                                 <th>payment</th>
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
                                                                 <th>assign</th>
-                                                                <th>action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -511,18 +545,17 @@
                                                                 <td>admin</td>
                                                                 <td><span class="label label-warning">Pending</span>
                                                                 </td>
-                                                                <td>Aadhar Update</td>
+                                                                <td><a href="#" class="openModalBtnReview">Aadhar
+                                                                        Update</a></td>
                                                                 <td>h</td>
+                                                                <td><a href="#" class="openFileModalBtn"><i
+                                                                            class="fa fa-eye"></i></a></td>
                                                                 <td>Salary Deduction</td>
                                                                 <td>Salary</td>
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
                                                                 <td class="text-center">Admin Panel, Team1 </td>
-                                                                <td>
-                                                                    <a
-                                                                        class="btn btn-primary openModalBtnReview">Review</a>
-                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -558,7 +591,7 @@
                                             </div>
                                             <div class="col-md-12" style="margin-top: 20px;">
                                                 <div class="table-responsive" style="border:0">
-                                                    <table class="table table-advance" id="table4">
+                                                    <table class="table table-advance" id="table1">
                                                         <thead>
                                                             <tr>
                                                                 <th style="width:18px"><input type="checkbox"></th>
@@ -566,13 +599,13 @@
                                                                 <th>status</th>
                                                                 <th>subject</th>
                                                                 <th>message</th>
+                                                                <th>file</th>
                                                                 <th>type</th>
                                                                 <th>payment</th>
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
                                                                 <th>assign</th>
-                                                                <th>action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -581,18 +614,17 @@
                                                                 <td>admin</td>
                                                                 <td><span class="label label-warning">Pending</span>
                                                                 </td>
-                                                                <td>Aadhar Update</td>
+                                                                <td><a href="#" class="openModalBtnReview">Aadhar
+                                                                        Update</a></td>
                                                                 <td>h</td>
+                                                                <td><a href="#" class="openFileModalBtn"><i
+                                                                            class="fa fa-eye"></i></a></td>
                                                                 <td>Salary Deduction</td>
                                                                 <td>Salary</td>
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
                                                                 <td class="text-center">Admin Panel, Team1 </td>
-                                                                <td>
-                                                                    <a
-                                                                        class="btn btn-primary openModalBtnReview">Review</a>
-                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -628,7 +660,7 @@
                                             </div>
                                             <div class="col-md-12" style="margin-top: 20px;">
                                                 <div class="table-responsive" style="border:0">
-                                                    <table class="table table-advance" id="table4">
+                                                    <table class="table table-advance" id="table1">
                                                         <thead>
                                                             <tr>
                                                                 <th style="width:18px"><input type="checkbox"></th>
@@ -636,13 +668,13 @@
                                                                 <th>status</th>
                                                                 <th>subject</th>
                                                                 <th>message</th>
+                                                                <th>file</th>
                                                                 <th>type</th>
                                                                 <th>payment</th>
                                                                 <th>customer name</th>
                                                                 <th>date</th>
                                                                 <th>time</th>
                                                                 <th>assign</th>
-                                                                <th>action</th>
                                                             </tr>
                                                         </thead>
                                                         <tbody>
@@ -651,18 +683,17 @@
                                                                 <td>admin</td>
                                                                 <td><span class="label label-warning">Pending</span>
                                                                 </td>
-                                                                <td>Aadhar Update</td>
+                                                                <td><a href="#" class="openModalBtnReview">Aadhar
+                                                                        Update</a></td>
                                                                 <td>h</td>
+                                                                <td><a href="#" class="openFileModalBtn"><i
+                                                                            class="fa fa-eye"></i></a></td>
                                                                 <td>Salary Deduction</td>
                                                                 <td>Salary</td>
                                                                 <td>Rahul</td>
                                                                 <td>2025-02-19</td>
                                                                 <td>10:27 PM</td>
                                                                 <td class="text-center">Admin Panel, Team1 </td>
-                                                                <td>
-                                                                    <a
-                                                                        class="btn btn-primary openModalBtnReview">Review</a>
-                                                                </td>
                                                             </tr>
                                                         </tbody>
                                                     </table>
@@ -744,6 +775,10 @@
             $('.openModalBtnReview').on('click', function () {
                 $('#reviewModal').modal('show');
             });
+
+            $('.openFileModalBtn').on('click', function () {
+                $('#fileModal').modal('show');
+            });
         });
     </script>
 </body>
@@ -763,7 +798,6 @@
                     <form class="mail-compose form-horizontal" action="#">
                         <p><input type="text" placeholder="Created By" class="form-control" value="HR" readonly></p>
                         <p><input type="text" placeholder="Subject" class="form-control"></p>
-                        <p><input type="text" placeholder="Your Name" class="form-control"></p>
                         <p><input type="number" placeholder="Amount" class="form-control"></p>
                         <p><label for="">Attach Photo or PDF</label><input type="file" placeholder="Amount"
                                 class="form-control"></p>
@@ -799,31 +833,209 @@
 </div>
 
 <!-- modal for showing expense data -->
-<div id="reviewModal" class="modal fade" role="dialog">
+<div id="fileModal" class="modal fade" role="dialog">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title" style="color: black;" id="modalTitle">Review Expense</h4>
+                <h4 class="modal-title" style="color: black;" id="modalTitle">Atteched File</h4>
             </div>
             <div class="">
                 <div class="col-md-12">
-                    <p><strong>ID:</strong> <span id="review-id">3</span></p>
-                    <p><strong>Created By:</strong> <span id="review-created">Admin Panel - 2025-02-19 01:17 PM</span>
-                    </p>
-                    <p><strong>Subject:</strong> <span id="review-subject">Rent Agreement</span></p>
-                    <p><strong>Amount:</strong> ₹<span id="review-amount">1000</span></p>
-                    <p><strong>Type:</strong> <span id="review-type">Salary Deduction</span></p>
-                    <p><strong>Date:</strong> <span id="review-date">2025-02-19</span></p>
-                    <p><strong>Time:</strong> <span id="review-time">01:17 PM</span></p>
-                    <button id="approve-btn" class="btn btn-primary approve-btn">Approve</button>
-                    <button id="mark-as-paid" class="btn btn-primary mark-as-paid">Mark as Paid</button>
-                    <button id="reject-btn" class="btn btn-danger reject-btn">Reject</button>
-                    <button class="btn action-btn" data-dismiss="modal">Close</button>
+                    <img src="https://img.freepik.com/free-photo/luxurious-car-parked-highway-with-illuminated-headlight-sunset_181624-60607.jpg"
+                        alt="" width="100%">
                 </div>
             </div>
             <div class="modal-footer">
+                <div class="col-sm-12" style="margin-top: 10px;">
+                    <button class="btn action-btn btn-success">Downlaod</button>
+                    <button class="btn action-btn" data-dismiss="modal">Close</button>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<!-- modal for showing expense data -->
+<div id="reviewModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">×</button>
+                <h4 class="modal-title" style="color: black;" id="editModalLabel">Edit Expense</h4>
+            </div>
+            <!-- Modal Body -->
+            <div class="modal-body">
+                <div class="row">
+                    <form class="edit_task" action="javascript:void(0);" enctype="multipart/form-data" method="post">
+                        <input type="hidden" name="_token" value="PHkpygHzZFRP4XcxpbpEXIH878Hn6TMHC6l1XaOl"
+                            autocomplete="off"> <input type="hidden" name="admin_id" value="1" class="form-control">
+                        <div class="col-sm-12 mb-2">
+                            <label for="subject">Id</label>
+                            <input type="text" id="created_by" class="form-control created_by" value="1" readonly="">
+                        </div>
+                        <div class="col-sm-12 mb-2">
+                            <label for="subject">Created By</label>
+                            <input type="text" id="created_by" class="form-control created_by" value="admin"
+                                readonly="">
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="edit_subject"
+                                class="form-control edit_subject disabled-div" value="medical" disabled="disabled">
+                        </div>
+                        <div class="col-sm-12">
+                            <label for="subject">Amount</label>
+                            <input type="text" name="subject" id="edit_subject"
+                                class="form-control edit_subject disabled-div" value="₹ 10,000" disabled="disabled">
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label>Type</label>
+                            <select name="" id="" class="form-control" disabled="disabled">
+                                <option value="">Salary Deducation</option>
+                                <option value="">Company Expense</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-12">
+                            <label>Assign to</label>
+                            <select name="" id="" class="form-control" disabled="disabled">
+                                <option value="">Admin Panel</option>
+                                <option value="">HR</option>
+                            </select>
+                        </div>
+
+                        <div class="col-sm-12" style="margin-top: 20px;">
+                            <p><strong>Date:</strong> <span id="review-date">2025-02-19</span></p>
+                            <p><strong>Time:</strong> <span id="review-time">01:17 PM</span></p>
+                        </div>
+
+                        <!-- <div class="col-sm-12">
+                            <select name="task_type" id="edit_task_type" data-placeholder="Type Task"
+                                class="form-control chosen EditChoosen edit_task_type disabled-div" tabindex="-1">
+                                <option value="To Do">Type</option>
+                                <option value="Salary Deduction">Salary Deduction</option>
+                                <option value="Compant Expense">Compant Expense</option>
+                            </select>
+                        </div> -->
+
+                        <div class="col-sm-12" style="display: flex; gap: 10px; align-items: center;">
+                            <button id="task_status_button" class="btn task_status_button btn-primary approve-btn"
+                                type="button">Approve</button>
+                            <button id="task_status_button" class="btn task_status_button btn-primary mark-as-paid"
+                                type="button">Mark as Paid</button>
+                            <button id="task_status_button" class="btn task_status_button btn-danger reject-btn"
+                                type="button">Reject</button>
+                            <!-- <button id="task_status_button" class="btn task_status_button action-btn" type="button"
+                                data-dismiss="modal">Close</button> -->
+                            <!-- Task Status Check -->
+                            <div style="display: flex; gap: 10px;">
+                                <button id="edit_button" class="btn btn-primary edit_button" type="button">Edit</button>
+                                <button id="update_button" class="btn btn-success update_button"
+                                    type="submit">Update</button>
+                            </div>
+                        </div>
+                    </form>
+                    <!-- task edit form end here -->
+
+                    <!-- Add Comment And History Start Here -->
+                    <div class="col-sm-12">
+                        <p>
+                        </p>
+                        <div class="tabbable">
+                            <ul id="myTab1" class="nav nav-tabs">
+                                <li class="active"><a href="#comment1" data-toggle="tab"><i class="fa fa-home"></i>
+                                        Add Comments</a></li>
+                                <li><a href="#history1" data-toggle="tab"><i class="fa fa-user"></i>
+                                        History</a></li>
+                            </ul>
+                            <div id="myTabContent1" class="tab-content">
+                                <div class="tab-pane fade in active all_tabs_bg" id="comment1">
+                                    <div class="boligation_tabls">
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="messages-input-form">
+                                                    <form class="add_comment_task" method="POST"
+                                                        action="javascript:void(0);">
+                                                        <input type="hidden" name="_token"
+                                                            value="PHkpygHzZFRP4XcxpbpEXIH878Hn6TMHC6l1XaOl"
+                                                            autocomplete="off">
+                                                        <div class="input">
+                                                            <input type="hidden" name="task_id" id="comment_task_id"
+                                                                class="comment_task_id" value="4">
+                                                            <input type="hidden" name="admin_id" value="1">
+                                                            <input type="text" name="comment"
+                                                                placeholder="Write here..." class="form-control">
+                                                        </div>
+                                                        <div class="buttons">
+                                                            <button type="submit" class="btn btn-primary"><i
+                                                                    class="fa fa-share"></i></button>
+                                                        </div>
+                                                    </form>
+                                                </div>
+
+                                                <!-- Data Load From Ajax  -->
+                                                <ul class="messages messages-stripped" id="get_comment"></ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade all_tabs_bg" id="history1">
+                                    <div class="boligation_tabls">
+                                        <div class="table-responsive">
+                                            <table class="table table-advance" style="padding: 0px;">
+                                                <thead>
+                                                    <tr class="history_table">
+                                                        <th>#</th>
+                                                        <th>Date</th>
+                                                        <th>Created By</th>
+                                                        <th>Changes</th>
+                                                    </tr>
+                                                </thead>
+                                                <!-- get History data for task related -->
+                                                <tbody class="get_history">
+                                                    <tr class="history_table">
+                                                        <td>1</td>
+                                                        <td>20 Feb 2025</td>
+                                                        <td>Admin PANEL</td>
+                                                        <td>Task Closed</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- open and close input fileds when click on edit button -->
+<script>
+    $(document).ready(function () {
+        $(".update_button").hide();
+
+        $("#edit_button").click(function () {
+            $(".edit_subject, select").prop("disabled", false);
+
+            $(this).hide();
+            $(".update_button").show();
+        });
+
+        $(".update_button").click(function () {
+            $(".edit_subject, select").prop("disabled", true);
+
+            $("#edit_button").show();
+            $(this).hide();
+        });
+    });
+
+</script>
